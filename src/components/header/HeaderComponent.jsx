@@ -12,12 +12,6 @@ import MobileMenuComponent from './MobileMenuComponent';
 
 const HeaderComponent = () => {
 
-    const [isActive, SetIsActive] = useState(false);
-    const pathname = usePathname();
-
-  useEffect( () => {
-    if(isActive) SetIsActive(false)
-  }, [pathname])
   return (
     <div className='h-28 p-1 bg-black text-white font-bodyFont text-xl sticky top-0 z-[999]'>
         <ContainerComponent>

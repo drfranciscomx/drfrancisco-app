@@ -9,7 +9,7 @@ const FooterComponent = () => {
       <div className="w-full  px-40 md:px-34  sm:px-20 justify-between py-[60px] items-start  md:w-auto md:gap-[0px]">
         <footer className="">
           
-          <div className=" flex flex-row gap-x-12 flex-wrap items-start text-left text-5xl text-whitesmoke-300 font-body-regular-400 md:flex-1 md:gap-[50px] sm:flex-col sm:gap-[50px] sm:flex-[unset] sm:self-stretch">
+          <div className=" flex flex-row justify-between gap-x-12 flex-wrap items-start text-left text-5xl text-whitesmoke-300 font-body-regular-400 md:flex-1 md:gap-[50px] sm:flex-col sm:gap-[50px] sm:flex-[unset] sm:self-stretch">
             {/* Contact Column */}
             <div className="flex flex-col pr-5 items-start justify-start gap-[20px] text-base ">
               <motion.p 

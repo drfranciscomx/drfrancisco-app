@@ -12,6 +12,7 @@ export default function MobileMenuComponent() {
 
   useEffect( () => {
     if(isActive) SetIsActive(false)
+    
   }, [pathname])
 
   return (

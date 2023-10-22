@@ -6,6 +6,7 @@ import { decreaseQuantity, deleteProduct, increaseQuantity } from '@/redux/shopp
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FormatedPrice from '@/helpers/FormatedPrice';
+import Image from 'next/image';
 
 
 function getFirstImage(imageUrls) {
@@ -43,7 +44,7 @@ const CartItem = () => {
                             <span onClick={()=> dispatch(deleteProduct(item?._id))} className='text.lg hover:text-red-600 cursor-pointer duration-300'>
                                 <AiOutlineClose />
                             </span>
-                            <img src={item?.imageUrls[0]} width={500} height={500} alt='Imagen de Procedimiento' className='w-[50%] sm:w-full mdsm:w-2/3 h-30 object-cover'/>
+                            <Image src={item?.imageUrls[0]} width={500} height={500} alt='Imagen de Procedimiento' className='w-[50%] sm:w-full mdsm:w-2/3 h-30 object-cover'/>
                         </div>
                         {/* Model Value */}
                         <div className='w-full flex  justify-start sm:items-center sm:justify-center'>

@@ -10,7 +10,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="main-bosy-class w-full bg-black-gradient min-h-full">
-        <MainLayout children={children}/>
+        <MainLayout>
+          {children}
+        </MainLayout>
       </body>
     </html>
   )

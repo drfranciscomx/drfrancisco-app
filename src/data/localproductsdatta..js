@@ -10,7 +10,6 @@ export const localproducts = [
         "published": true,
         "imageUrls": [
           "/liposuction2.jpg",
-          "/liposuction2.jpg"
         ],
         "rating": 4,
         "quantity": 1,

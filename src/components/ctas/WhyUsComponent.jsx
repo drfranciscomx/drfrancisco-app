@@ -86,7 +86,7 @@ const WhyUsComponent = () => {
         transition={{duration: 0.7}} 
         className=" w-[40%] md:min-w-[100%] max-w-[100%] md:mt-[150px] sm:mt-0 flex flex-col items-center justify-center relative m-auto">
           <Image width={500} height={650} quality={100}
-            className="max-w-[100%]  relative my-0 z-[1] lg:top-[15px]"
+            className="max-w-[100%]  relative my-0 z-[1] lg:top-[15px] w-auto h-auto"
             alt="Dr Francisco Rodriguez"
             src="/frame-79.png"
           />

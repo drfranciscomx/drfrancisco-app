@@ -23,6 +23,7 @@ import 'swiper/css/scrollbar';
 import FormatedPrice from '@/helpers/FormatedPrice';
 import { calculatePercentage } from '@/helpers';
 import { localproducts } from '@/data/localproductsdatta.';
+import Image from 'next/image';
 
 const DetailsPage = (ctx) => {
     
@@ -34,7 +35,6 @@ const DetailsPage = (ctx) => {
 
     const [isLoading, setIsLoading] = useState(false)
     const [filteredProducts, setFilteredProducts] = useState([])
-    const BASE_URL = `http://localhost:3000/api/servicios`
     const id = ctx.params.id
     const URL = `http://localhost:3000/api/localservicio?${id}`
     const dispatch = useDispatch()
@@ -49,7 +49,7 @@ const DetailsPage = (ctx) => {
       const getData = setTimeout( async () => {
         try {
           setIsLoading(true)
-          const res = await fetch(BASE_URL)
+          const res = await fetch(`http://localhost:3000/api/servicios`)
           const { products } = await res.json()
           
 
@@ -210,27 +210,29 @@ const DetailsPage = (ctx) => {
          
         <div className='w-[95%] mx-auto wrapper-class gap-5 bg-stone-900 bg-opacity-80 p-4 rounded-lg'>
           <div className='flex md:flex-col-reverse flex-row'>
-          <div className='images-grouped-class flex flex-col w-full'>
-              <div className='flex justify-center items-center align-middle h-full '>
+          <div className='w-2/3 images-grouped-class justify-end flex flex-col '>
+              <div className='flex items-end  justify-end h-full '>
                 { isLoading ? <div className={`${classes.loader} absolute h-20 `} /> 
                     : <motion.div 
                     initial={{x:-50, opacity:0 }} 
                     whileInView={{x:0, opacity: 1 }} 
                     transition={{duration: 0.7}}
-                    className='md:p-2 p-8'
+                    className='md:p-2 p-10'
                   >
                   
-                    <img
+                    <Image
                       ref={imageRef}
-                      src={  product?.imageUrls ? (product.imageUrls[0]) : "" }
+                      src={  product?.imageUrls ? (product.imageUrls[0]) : "/images/faq@3x.png" }
                       alt="product image"
-                      className="rounded-lg object-cover"
+                      className="rounded-lg object-cover w-auto h-auto"
+                      width={700}
+                      height={700}
                     />
                   </motion.div>
                   }
               </div>
             
-              <div className='flex flex-row gap-4 mt-2 px-10 sm:px-2 image-slider-class h-full'>
+              <div className='flex flex-row justify-end items-end gap-4 mt-2 pl-20 sm:px-2 image-slider-class h-full'>
                 { isLoading ? <div className={`${classes.loader} absolute h-20 `} /> 
                     : <Swiper
                         // install Swiper modules
@@ -238,8 +240,8 @@ const DetailsPage = (ctx) => {
                         spaceBetween={10}
                         slidesPerView={3}
                         autoplay={true}
-                        onSwiper={(swiper) }
-                        onSlideChange={() => ('')}
+                        onSwiper={(swiper) => console.log()}
+                        onSlideChange={() => console.log('')}
                         className='w-full cursor-pointer'
                       >
                         {
@@ -248,11 +250,12 @@ const DetailsPage = (ctx) => {
                                   <a 
                                     className='slider-link cursor-pointer'
                                     onClick={() => setImgPreview(image)}>
-                                    <img
+                                    <Image
                                       src={ image ? image : "" }
                                       alt="product image"
                                       className="rounded-lg w-150 h-150 p-1"
-                                      
+                                      width={250}
+                                      height={250}
                                     />
                                   </a>
                               </SwiperSlide>
@@ -266,7 +269,7 @@ const DetailsPage = (ctx) => {
               </div>
           </div>
 
-          <div className="flex flex-col justify-center gap-y-10 w-5/6 md:w-full p-5 pb-10">
+          <div className="flex flex-col pt-10 gap-y-10 w-3/4 md:w-full p-5 pb-10">
             <motion.div 
             initial={{x:50, opacity:0 }} 
             whileInView={{x:0, opacity: 1 }} 
@@ -283,7 +286,7 @@ const DetailsPage = (ctx) => {
                     {
                       product?.promoPrice ?   <div>
                       <div className="border-[1px] border-yellow-600 py-1 px-4 rounded-full text-xs">
-                        <p>{calculatePercentage(product?.deposit, product?.promoPrice)}% off</p>
+                        <p>{calculatePercentage(product?.deposit, product?.promoPrice)}% menos</p>
                       </div>
                       <div className="flex items-center gap-x-2">
                         <p className="line-through text-sm text-white font-bodyFont">
@@ -346,14 +349,7 @@ const DetailsPage = (ctx) => {
           </div>
           </div>
         </div>
-        <div className="px-8 sm:px-4 my-8 w-[80%] lg:w-full mx-auto">
-          <p className="text-xl py-1 font-semibold">Trending Products</p>
-          <div className="grid xsm:grid-cols-1 md:grid-cols-2 grid-cols-4 gap-4 mt-2">
-            {filteredProducts?.map((product) => (
-              <ProductsData key={product._id} item={product} />
-            ))}
-          </div>
-        </div>
+       
         <ToastContainer />
       </div>
     )

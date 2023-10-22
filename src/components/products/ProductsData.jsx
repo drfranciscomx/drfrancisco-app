@@ -31,10 +31,12 @@ const ProductsData = ({ item }) => {
       >
         <a  href={`/details/${item._id}`}>
           <div className="w-full h-96 group overflow-hidden relative">
-            <img
+            <Image
               src={item?.imageUrls[0]}
               alt="product image"
               className="w-full h-full object-cover group-hover:scale-110 duration-200 rounded-t-lg"
+              width={500}
+              height={500}
             />
               
               {item?.isPromo && (
@@ -50,7 +52,7 @@ const ProductsData = ({ item }) => {
           <p className="text-white tracking-widest">{item?.title}</p>
           <div className="flex items-center justify-between">
             {/* <div className="border-[1px] border-yellow-600 py-1 px-4 rounded-full text-xs">
-              <p>{calculatePercentage(item?.price, item?.oldPrice)}% off</p>
+              <p>{calculatePercentage(item?.price, item?.oldPrice)}% menos</p>
             </div> */}
             <div className="flex flex-col gap-y-1">
               <p className="text-slate-500 line-through text-sm">

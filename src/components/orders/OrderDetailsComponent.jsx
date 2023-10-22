@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { UseSelector } from 'react-redux/es/hooks/useSelector'
-
 import ContainerComponent from '../containers/ContainerComponent'
 import Image from 'next/image'
 import FormatedPrice from '@/helpers/FormatedPrice'
@@ -47,7 +46,7 @@ const OrderDetailsComponent = () => {
                  <div className='grid grid-cols-7 text-sm font-medium py-2 border-b-[1px] border-b-gray-300' key={item?._id}>
  
                    <div className='col-span-4 flex items-start text-sm gap-4'>
-                     <img src={item?.imageUrls[0]} alt="product image" width={500} height={500} className='w-20 h-20 object-cover rounded-md'/>
+                     <Image src={item?.imageUrls[0]} alt="product image" width={500} height={500} className='w-20 h-20 object-cover rounded-md'/>
                      <div className=''>
                      <h3 className='text-xl font-headerFont'>{item?.title}</h3>
                      <p>{item?.description.substring(0, 100)}...</p>
