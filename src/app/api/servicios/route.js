@@ -13,7 +13,7 @@ export function POST(req, res) {
   }
   
   export async function GET(req, res) {
-    db.disconnect()
+    
     return getFilteredProducts(req, res);
   }
   
