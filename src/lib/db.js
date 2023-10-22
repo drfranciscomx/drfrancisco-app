@@ -6,28 +6,33 @@ async function connect() {
     if (connection.isConnected) {
         return;
     }
-    
-    if (mongoose.connections.length > 0) {
-        connection.isConnected = mongoose.connections[0].readyState;
 
-        if (connection.isConnected === 1) {
-            return;
-        }
-        await mongoose.disconnect();
+    try {
+        await mongoose.connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+
+        connection.isConnected = true;
+        console.log('Connected to MongoDB');
+    } catch (error) {
+        console.error('Error connecting to MongoDB:', error);
+        throw error;
     }
-
-    
-    const db = await mongoose.connect(process.env.MONGO_URL);
-    connection.isConnected = db.connections[0].readyState;
 }
 
 async function disconnect() {
     if (connection.isConnected) {
-        if (process.env.NODE_ENV === 'production') {
+        try {
             await mongoose.disconnect();
             connection.isConnected = false;
+            console.log('Disconnected from MongoDB');
+        } catch (error) {
+            console.error('Error disconnecting from MongoDB:', error);
+            throw error;
         }
     }
 }
+
 const db = { connect, disconnect };
 export default db;

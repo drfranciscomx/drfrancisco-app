@@ -36,7 +36,7 @@ const DetailsPage = (ctx) => {
     const [isLoading, setIsLoading] = useState(false)
     const [filteredProducts, setFilteredProducts] = useState([])
     const id = ctx.params.id
-    const URL = `https://drfrancisco-app-tkar.vercel.app:3000/api/localservicio?${id}`
+    const URL = `${process.env.NEXTAUTH_URL}/api/localservicio?${id}`
     const dispatch = useDispatch()
     const [product, setProduct] = useState({})
     const [reviews, setReviews] = useState([])
@@ -49,7 +49,7 @@ const DetailsPage = (ctx) => {
       const getData = setTimeout( async () => {
         try {
           setIsLoading(true)
-          const res = await fetch(`https://drfrancisco-app-tkar.vercel.app:3000/api/servicios`)
+          const res = await fetch(`${process.env.NEXTAUTH_URL}/api/servicios`)
           const { products } = await res.json()
           
 
@@ -145,26 +145,6 @@ const DetailsPage = (ctx) => {
         fetchDetails()
     }, [])
 
-    // useEffect(() => {
-    //     const fetchReviews = async () => {
-    //         try {
-    //             const res = await fetch(`http://localhost/api/review?productId=${id}`, {
-    //               'mode': 'cors',
-    //               'headers': {
-    //                   'Access-Control-Allow-Origin': 'GET, POST, PUT',
-    //               }
-    //             })
-    //             const data = await res.json()
-    //             setReviews(data)
-    //         } catch (error) {
-    //             console.log(error)
-    //         }
-    //     }
-    //     fetchReviews()
-    // }, [reviews])
-
-    const handleShowModal = () => setShowModal(true)
-    const handleHideModal = () => setShowModal(false)
 
     const starRating = (props) => {
           if (props) {
@@ -195,13 +175,6 @@ const DetailsPage = (ctx) => {
           );
         
     }
-
-    // const handleAddToFavorites = () => {
-    //     dispatch(addProduct({
-    //         ...product,
-    //         quantity: 1
-    //     }))
-    // }
 
 
     return (

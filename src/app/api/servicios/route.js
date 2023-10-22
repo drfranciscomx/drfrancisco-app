@@ -8,7 +8,6 @@ import {
 await db.connect()
 
 export function POST(req, res) {
-  db.disconnect()
     return newProduct(req, res);
   }
   

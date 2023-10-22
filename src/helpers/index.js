@@ -15,8 +15,8 @@ export const getProducts = async (searchParams) => {
   }
 
   const searchQuery = queryString.stringify(urlParams);
-  const {data} = await axios.get(`https://drfrancisco-app-tkar.vercel.app:3000/api/servicios?${searchQuery}` );
- 
+  const {data} = await axios.get(`${process.env.NEXTAUTH_URL}/api/servicios?${searchQuery}` );
+  console.log(data);
   if (!{data}) {
     throw new Error("Failed to fetch products")
   } 
