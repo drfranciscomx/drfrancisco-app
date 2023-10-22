@@ -36,7 +36,7 @@ const DetailsPage = (ctx) => {
     const [isLoading, setIsLoading] = useState(false)
     const [filteredProducts, setFilteredProducts] = useState([])
     const id = ctx.params.id
-    const URL = `http://localhost:3000/api/localservicio?${id}`
+    const URL = `https://drfrancisco-app-tkar.vercel.app/api/localservicio?${id}`
     const dispatch = useDispatch()
     const [product, setProduct] = useState({})
     const [reviews, setReviews] = useState([])
@@ -49,7 +49,7 @@ const DetailsPage = (ctx) => {
       const getData = setTimeout( async () => {
         try {
           setIsLoading(true)
-          const res = await fetch(`http://localhost:3000/api/servicios`)
+          const res = await fetch(`https://drfrancisco-app-tkar.vercel.app/api/servicios`)
           const { products } = await res.json()
           
 
