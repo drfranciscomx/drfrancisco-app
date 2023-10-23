@@ -49,7 +49,7 @@ const DetailsPage = (ctx) => {
       const getData = setTimeout( async () => {
         try {
           setIsLoading(true)
-          const res = await fetch(`${process.env.NEXTAUTH_URL}/api/servicios`)
+          const res = await fetch(`/api/servicios`)
           const { products } = await res.json()
           
 
