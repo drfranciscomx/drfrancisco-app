@@ -30,10 +30,10 @@ const OrderDetailsComponent = () => {
     
   }, [orderData.order])
   return (
-    <div className='min-h-[100vh]'>
+    <div className='py-10 w-[80%] mx-auto'>
       {
-        orderData?.order && orderData?.order.length > 0 ?  <ContainerComponent className={ 'mx-auto bg-white px-40 '} >
-        <div className=''>
+        orderData?.order && orderData?.order.length > 0 ?  <ContainerComponent className={ 'mx-auto bg-white px-40 pt-10 pb-20 flex flex-col rounded-md'} >
+        <div className='title-items-class justify-start'>
            <div className='grid grid-cols-7 uppercase text-sm font-medium py-2 border-b-[1px] border-b-gray-300'>
              <p className='col-span-4'>Procedimientos</p>
              <p className='fñex items-center justify-center'>Costo</p>
@@ -70,7 +70,10 @@ const OrderDetailsComponent = () => {
                ))
              }
            </div>
-            
+         
+       </div>
+       <div className="paymment-details-class flex flex-col justify-end">
+                 
            <div className='text-ls font-medium py-2 border-b-[1px] border-b-gray-300'>
              <p>Detalles de Pago</p>
            </div>

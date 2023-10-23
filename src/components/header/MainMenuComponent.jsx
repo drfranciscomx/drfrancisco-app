@@ -46,18 +46,20 @@ const MainMenuComponent = () => {
 
 
   return (
-    <header className="self-stretch flex flex-row px-20 box-border items-center justify-center sticky m-auto ">
-
-        <nav className='md:hidden m-0 flex-1  flex flex-row py-2.5 px-5 items-center justify-end gap-7 text-sm tracking-widest '>
+    <header className="self-stretch w-[80%] flex flex-row px-20 box-border items-center justify-center sticky mx-auto ">
+          {/* Logo  */}
+          <Link href={"/"} className='min-w-[150px] object-contain justify-center'>
+        <LogoComponent/>
+        </Link>
+        {/* Navigatio left */}
+        <nav className='md:hidden m-0 flex-1  flex flex-row py-2.5 px-5 items-center justify-start gap-7 text-sm tracking-widest '>
             <CustomLink href="/servicios" title={`SERVICIOS`} className='text-gray-white no-underline font-bold'/>
             <CustomLink href="/faq" title={`PREGUNTAS`} className='text-gray-white no-underline'/>
             <CustomLink href="/testimonios" title={`TESTIMONIOS`} className='text-gray-white no-underline' />
         </nav>
-        <Link href={"/"} className='min-w-[150px] object-contain'>
-        <LogoComponent/>
-        </Link>
+      
         
-        <nav className='md:hidden m-0 flex-1  flex flex-row py-2.5 px-5 items-center  justify-start gap-7 font-poppins text-sm tracking-widest'>
+        <nav className='md:hidden m-0 flex-1  flex flex-row py-2.5 px-5 items-center  justify-end gap-7 font-poppins text-sm tracking-widest'>
            
             <CustomLink href="/acerca" title={`ACERCA`} className='text-gray-white no-underline' />
             <CustomLink href="/contacto" title={`CONTACTO`} className='text-gray-white no-underline' />
@@ -79,21 +81,21 @@ const MainMenuComponent = () => {
               </span>
             </div>
             </Link>
-            {session?.user?.image}
-            {/* User Image */}
-            {
-              isLoggedIn && session?.user?.image ? <Image src={session?.user?.image} alt='avatar' width={35} height={35} className='rounded-full object-cover'/> :  isLoggedIn && (<div className='h-10 w-10 bg-gold-gradient rounded-full object-cover flex justify-center items-center' ><p className=' text-black text-2xl uppercase relative flex top-0 font-boldest'>{session?.user?.email.substring(0,1)}</p></div>) 
-            }
-            {/*  Order Button */}
-            {
+             {/*  Order Button */}
+             {
               orderData?.order && orderData?.order.length > 0 && session && (
                 <Link href={'/ordenes'} className='flex justify-center items-center gap-x-2'>
                   <BsBookmarks />
-                  <p className='text-sm font-semibold'>Pedidos</p>
+                  <p className='text-sm font-semibold'>Ordenes</p>
                 </Link>
               )
             }
              
+            {/* User Image */}
+            {
+              isLoggedIn && session?.user?.image ? <Image src={session?.user?.image} alt='avatar' width={35} height={35} className='rounded-full object-cover'/> :  isLoggedIn && (<div className='h-10 w-10 bg-gold-gradient rounded-full object-cover flex justify-center items-center' ><p className=' text-black text-2xl uppercase relative flex top-0 font-boldest'>{session?.user?.email.substring(0,1)}</p></div>) 
+            }
+           
              {/** Logout Button */}
              { isLoggedIn && (
                 <div onClick={()=>signOut()} className='cursor-pointer flex justify-center items-center gap-x-1 '>

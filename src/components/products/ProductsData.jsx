@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const ProductsData = ({ item }) => { 
-  
+  const router = useRouter()
 
   const dispatch = useDispatch();
   

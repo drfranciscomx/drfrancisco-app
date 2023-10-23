@@ -13,7 +13,7 @@ import MobileMenuComponent from './MobileMenuComponent';
 const HeaderComponent = () => {
 
   return (
-    <div className='h-28 p-1 bg-black text-white font-bodyFont text-xl sticky top-0 z-[999]'>
+    <div className='h-28 p-1 bg-black text-white font-bodyFont text-xl sticky top-0 z-[999]  w-full mx-auto px-4 xl:px-0 py-5 '>
         <ContainerComponent>
             <MainMenuComponent/>
             

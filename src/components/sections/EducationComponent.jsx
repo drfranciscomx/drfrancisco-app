@@ -6,7 +6,7 @@ import LiIcon from "./LiIcon";
 const Details = ({ place, years, position, description }) => {
   const ref = useRef(null);
   return (
-  <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between">
+  <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[80%] mx-auto flex flex-col items-center justify-between">
     <LiIcon reference={ref}/>
 
     <motion.div
@@ -46,7 +46,7 @@ const EducationComponent = () => {
         Experiencia y Formacion
       </h2>
 
-      <div  ref={ref} className="w-[85%] sm:w-full mx-auto relative left-0 mb-40">
+      <div  ref={ref} className="w-[60%] sm:w-full mx-auto relative left-0 mb-40">
 
 
         <motion.div 
