@@ -3,9 +3,7 @@ import ReactCompareImage from 'react-compare-image';
 import AnimatedText from '../texts/AnimatedText';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import arrowimage from "@/images/arrow-51.webp"
-import tummytucbefore from "@/images/Tummy-Tuck-Before.webp"
-import tummytucafter from "@/images/Tummy-Tuck-After.webp"
+import arrowimage from "@/images/arrow-51.png"
 import Link from 'next/link';
 
 const ViewResultsComponent = () => {
@@ -47,7 +45,7 @@ const ViewResultsComponent = () => {
                   transition={{duration: 0.7}} 
                   className="w-[70%] sm:w-[95%] mx-auto pb-20 items-center [transform:_rotate(-0.24deg)] [transform-origin:0_0]">
                 
-                  <ReactCompareImage leftImage="/Tummy-Tuck-Before.webp" rightImage="/Tummy-Tuck-After.webp" className="relative rounded-3xs w-full h-[493.42px] "/>
+                  <ReactCompareImage leftImage="/Tummy-Tuck-Before.jpg" rightImage="/Tummy-Tuck-After.jpg" className="relative rounded-3xs w-full h-[493.42px] "/>
 
             </motion.div>
       </div>
