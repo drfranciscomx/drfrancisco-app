@@ -36,7 +36,7 @@ const DetailsPage = (ctx) => {
     const [isLoading, setIsLoading] = useState(false)
     const [filteredProducts, setFilteredProducts] = useState([])
     const id = ctx.params.id
-    const URL = `${process.env.NEXTAUTH_URL}/api/localservicio?${id}`
+    const URL = `/api/localservicio?${id}`
     const dispatch = useDispatch()
     const [product, setProduct] = useState({})
     const [reviews, setReviews] = useState([])

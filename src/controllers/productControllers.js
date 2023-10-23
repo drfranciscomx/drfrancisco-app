@@ -19,7 +19,7 @@ export const newProduct = async (req, res, next) => {
     
     try {
       // Database operations
-      const apiFilters = new APIFilters(Product.find(), req.nextUrl.searchParams).searchtwo().filter();
+      const apiFilters = await new APIFilters(Product.find(), req.nextUrl.searchParams).searchtwo().filter();
 
       let products = await apiFilters.query
       const filteredProductsCount = products.length

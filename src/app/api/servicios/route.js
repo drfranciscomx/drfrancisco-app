@@ -8,12 +8,13 @@ import {
 await db.connect()
 
 export function POST(req, res) {
+
     return newProduct(req, res);
   }
   
   export async function GET(req, res) {
-    
-    return getFilteredProducts(req, res);
+   
+    return await getFilteredProducts(req, res);
   }
   
   export function PUT(req, res) {
