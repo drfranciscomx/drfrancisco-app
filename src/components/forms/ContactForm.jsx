@@ -21,13 +21,17 @@ const ContactForm = (credentials) => {
    const serviceId = credentials.serviceID;
    const publicKey = credentials.publicKEY;
    console.log("Event at form send:*************" , e);
+   
    e.preventDefault();
     
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(() => {
+          
           setData({from_name:"", email:"", message:"", tel:""})
       }, (error) => {
           console.log(error.text);
       });
+
+    
   };
 
   
@@ -45,9 +49,7 @@ const ContactForm = (credentials) => {
     initial={{y:30, opacity:0 }} 
     whileInView={{y:0, opacity: 1 }} 
     transition={{duration: 0.5}} 
-    method='post' onSubmit={ handleFormSubmit  && toast.success(`El mensaje se envio exitosamente.`, {
-      position: toast.POSITION.TOP_CENTER
-    }) }
+    method='post' onSubmit={ handleFormSubmit && toast.success(`El mensaje se envio exitosamente.`, { position: toast.POSITION.TOP_CENTER })}
     className={`flex flex-col gap-y-2 md:w-full md:px-5 w-[80%] mx-auto`}>
       <div className='flex flex-row gap-x-2'>
       <input className='inputFields w-full py-5 px-2 bg-stone-950 text-white font-bodyFont focus:outline-none' type="text" value={data.from_name} name='from_name' onChange={handleFormChange} id='from_name_id' placeholder='Nombre' />
