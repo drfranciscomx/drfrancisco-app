@@ -294,7 +294,7 @@ const DetailsPage = (ctx) => {
                 SKU: <span className="text-white font-bodyFont">{product?._id}</span>
               </span>
               <span>
-                Category: <span className="ttext-white font-bodyFont">{product?.category}</span>
+                Categoria: <span className="ttext-white font-bodyFont">{product?.category}</span>
               </span>
             </motion.div>
             <motion.div
