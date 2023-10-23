@@ -1,4 +1,4 @@
-import db from "@/lib/db";
+import db from "@/app/db/db";
 import {
   getFilteredProducts,
     newProduct,

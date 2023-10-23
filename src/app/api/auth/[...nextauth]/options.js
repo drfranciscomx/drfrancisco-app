@@ -4,7 +4,7 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import User from "@/models/User";
 import bcrypt from "bcrypt";
 import { signJwtToken } from "@/lib/jwt";
-import db from "@/lib/db";
+import db from '@/app/db/db';
 
 
 export const options = {
