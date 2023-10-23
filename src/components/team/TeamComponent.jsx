@@ -1,7 +1,6 @@
 "use client"
 import AnimatedText from "@/components/texts/AnimatedText";
 import { motion } from "framer-motion";
-import ContactCompnt from "../forms/ContactCompnt";
 import Image from "next/image";
 
 const TeamComponemt = () => {
@@ -47,34 +46,34 @@ const TeamComponemt = () => {
         
       </motion.h4>
      
-      <div className="mt-11 sm: h-[full] flex flex-row md:flex-col py-10 px-[0.44140625px] box-border items-center justify-center gap-[53px] text-left text-mid text-white">
+      <div className="mt-11 sm: h-[full] gap-x-24 flex flex-row md:flex-col py-10 px-[0.44140625px] box-border items-center justify-center gap-[53px] text-left text-mid text-white">
         <div className="relative h-[25px]">
           <Image width={20} height={20}
-            className="w-auto absolute top-[0px] left-[0px]  object-cover"
-            alt=""
+            className="absolute w-auto h-auto object-cover"
+            alt="checkmark"
             src="/frame.webp"
           />
-          <div className="relative top-[0px] left-[29.96px] leading-[146%] font-medium inline-block w-[262px]">
+          <div className="relative top-[0px] left-[29.96px] leading-[146%] font-medium inline-block ">
             4.9/5 Reseñas Positivas
           </div>
         </div>
         <div className="relative h-[25px]">
           <Image width={20} height={20}
-            className="absolute top-[0px] left-[0px]w-auto  object-cover"
-            alt=""
+            className="absolute w-auto h-auto object-cover"
+            alt="checkmark"
             src="/frame.webp"
           />
-          <div className="relative top-[0px] left-[29.96px] leading-[146%] font-medium inline-block w-[262px]">
+          <div className="relative top-[0px] left-[29.96px] leading-[146%] font-medium inline-block ">
             Capacitacion Continua
           </div>
         </div>
         <div className="relative h-[25px]">
           <Image width={20} height={20}
-            className="absolute top-[0px] left-[0px] w-auto  object-cover"
-            alt=""
+            className="absolute  w-auto h-auto object-cover"
+            alt="checkmark"
             src="/frame.webp"
           />
-          <div className="relative top-[0px] left-[29.96px] leading-[146%] font-medium inline-block w-[262px]">
+          <div className="relative top-[0px] left-[29.96px] leading-[146%] font-medium inline-block ">
           Tecnologia de Punta
           </div>
         </div>

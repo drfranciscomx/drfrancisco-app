@@ -6,6 +6,7 @@ import FaqComponent from '@/components/sections/FaqComponent'
 import TestimonialsComponent from '@/components/sections/TestimonialsComponent'
 import TestimonialsSlider from '@/components/sliders/TestimonialsSlider'
 import PageTransition from '@/components/transitions/PageTransition'
+import { ToastContainer } from 'react-toastify'
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
        <HeroComponent />
        <ViewResultsComponent/>
        <FaqComponent/>
-      
+       <ToastContainer />
     </main>
   )
 }

@@ -24,8 +24,10 @@ import FormatedPrice from '@/helpers/FormatedPrice';
 import { calculatePercentage } from '@/helpers';
 import { localproducts } from '@/data/localproductsdatta.';
 import Image from 'next/image';
+import { useRouter } from "next/navigation";
 
 const DetailsPage = (ctx) => {
+    const router = useRouter()
     
     const imageRef = useRef(null)
 
@@ -308,9 +310,7 @@ const DetailsPage = (ctx) => {
                 whileHover={{ scale: 1.07 }}
                 whileTap={{ scale: 0.9 }}
                 className="bg-gold-gradient flex flex-row items-center justify-between px-4 py-2 text-sm gap-x-4 tracking-wide rounded-full text-black hover:bg-darkText  duration-500"
-                onClick={() => dispatch(addToCart(product)) && toast.success(`${product?.title.substring(0,15)}... se agrego al carrito`, {
-                  position: toast.POSITION.TOP_CENTER
-                })}
+                onClick={() => dispatch(addToCart(product)) && toast.success(`${product?.title.substring(0,15)}... se agrego al carrito`) && router.push('/cart')}
               >
                 Agregar a carrito
                 <span className="text-xl text-slate-100 w-12 flex items-center justify-center group-hover:bg-black duration-200  rounded-full py-2">
@@ -322,8 +322,8 @@ const DetailsPage = (ctx) => {
           </div>
           </div>
         </div>
-       
-        <ToastContainer />
+       <ToastContainer/>
+        
       </div>
     )
   }

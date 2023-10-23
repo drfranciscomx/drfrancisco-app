@@ -12,7 +12,7 @@ const ContactCompnt = async () => {
   return (
     <div className='flex flex-row md:flex-col '>
       <div className='w-full z-10'>
-          <div className=' pb-20'>
+          <div className=' w-[70%] mx-auto pb-20 mt-10'>
             
             <ContactForm  templateID={templateid} serviceID={serviceid} publicKEY={publickey} />
           </div>

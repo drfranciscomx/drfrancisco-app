@@ -81,7 +81,7 @@ const PaymentForm = () => {
       //=============================== Stripe Payment starts here ============================
   return (
     <div className='w-full bg-white p-10 flex flex-col justify-between '> 
-        <h2>Quote Totals</h2>
+        <h2>Totales</h2>
         <div className='border-b-[1px] border-b-slate-300 py-2'>
            <div className=' flex items-center justify-between'>
                 <p className='uppercase font-medium'>Cantidades</p><p>{totalQty}</p>

@@ -8,28 +8,45 @@ import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-const ContactForm = (credentials) => {
-  const [data, setData] = useState({from_name:"", email:"", message:"", tel:""});
-  console.log(data);
-  const form = useRef();
 
- 
-   
+const ContactForm = (credentials) => {
+  const templateId = credentials.templateID
+  const serviceId = credentials.serviceID
+  const publicKey = credentials.publicKEY
+  const [data, setData] = useState({from_name:"", email:"", message:"", tel:""})
+  const form = useRef()
   const handleFormSubmit = async (e) => {
-    //email js service Ids
-   const templateId = credentials.templateID;
-   const serviceId = credentials.serviceID;
-   const publicKey = credentials.publicKEY;
-   console.log("Event at form send:*************" , e);
-   
-   e.preventDefault();
-    
+    e.preventDefault()
+
+    if (form.current.honeypot.value.length > 0) {
+        setData({from_name:"", email:"", message:"", tel:""})
+        toast.error(`Este mensaje si se mando no te preocupes bot.`)
+        return
+    }
+
+    if (form.current.from_name_id.value === "") {
+      toast.warning(`Por favor ingresa tu nombre`)
+      return
+    }else if (form.current.email_id.value === "") {
+      toast.warning(`Por favor ingresa tu email`)
+      return
+    }else if (form.current.tel_id.value === "") {
+      toast.warning(`Por favor ingresa tu Telefono`)
+      return
+    }else if (form.current.message_id.value === "") {
+      toast.warning(`Por favor ingresa tu mensaje`)
+      return
+    }
+  
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(() => {
           
           setData({from_name:"", email:"", message:"", tel:""})
       }, (error) => {
           console.log(error.text);
       });
+
+    toast.success(`El mensaje se envio exitosamente.`);
+    
 
     
   };
@@ -49,8 +66,8 @@ const ContactForm = (credentials) => {
     initial={{y:30, opacity:0 }} 
     whileInView={{y:0, opacity: 1 }} 
     transition={{duration: 0.5}} 
-    method='post' onSubmit={ handleFormSubmit && toast.success(`El mensaje se envio exitosamente.`, { position: toast.POSITION.TOP_CENTER })}
-    className={`flex flex-col gap-y-2 md:w-full md:px-5 w-[80%] mx-auto`}>
+    method='post' onSubmit={ handleFormSubmit }
+    className={`flex flex-col gap-y-2 md:w-full md:px-5 w-full mx-auto`}>
       <div className='flex flex-row gap-x-2'>
       <input className='inputFields w-full py-5 px-2 bg-stone-950 text-white font-bodyFont focus:outline-none' type="text" value={data.from_name} name='from_name' onChange={handleFormChange} id='from_name_id' placeholder='Nombre' />
       <input className='inputFields w-full py-5 px-2  bg-stone-950 text-white font-bodyFont focus:outline-none' type="email" value={data.email} name='email' onChange={handleFormChange} id='email_id' placeholder='Email'/>
@@ -67,7 +84,7 @@ const ContactForm = (credentials) => {
             <motion.button 
             whileHover={{y:-4 }}
             whileTap={{ y:1 }} 
-            transition={{duration: 0.09}}
+            transition={{duration: 0.02}}
             className="mt-5 cursor-pointer [border:none] px-10 py-5  sm:px-5 bg-black  items-start justify-center hover:bg-yellow-600 duration-300 ease-linear"
             type='submit'
             >
@@ -86,7 +103,7 @@ const ContactForm = (credentials) => {
           </motion.button>
 
       </motion.div>
-     <ToastContainer />
+    
     </motion.form>
      </>
   )

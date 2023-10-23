@@ -11,8 +11,10 @@ import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/shoppingSlice";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const ProductsData = ({ item }) => { 
+  
 
   const dispatch = useDispatch();
   
@@ -80,7 +82,7 @@ const ProductsData = ({ item }) => {
               whileHover={{ scale: 1.07 }}
               whileTap={{ scale: 0.9 }}
               className="bg-yellow-600 px-4 py-2 text-sm flex flex-row justify-between gap-x-2 items-center tracking-wide rounded-full text-slate-100 hover:bg-black hover:text-white duration-500"
-              onClick={() => dispatch(addToCart(item)) && toast.success(`${item?.title.substring(0,15)} se agrego al carrito!`)}
+              onClick={() => dispatch(addToCart(item)) && toast.success(`${item?.title.substring(0,15)} se agrego al carrito!`) && router.push('/cart')}
             >
               Agregar a carrito
               <IoMdCart className=""/>
@@ -89,7 +91,7 @@ const ProductsData = ({ item }) => {
           </div>
         </div>
       </motion.div>
-      <ToastContainer />
+      
     </div>
   );
 };

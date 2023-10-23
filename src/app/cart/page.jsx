@@ -8,6 +8,7 @@ import { resetCart } from '@/redux/shoppingSlice'
 import PaymentForm from '@/components/cart/PaymentForm'
 import Link from 'next/link'
 import PageTransition from '@/components/transitions/PageTransition'
+import { ToastContainer } from 'react-toastify'
 
 
 const CartPage = () => {
@@ -38,7 +39,9 @@ const CartPage = () => {
         </Link>
        </div>)
      }
+     
    </ContainerComponent>
+   <ToastContainer />
     </div>
    
   )

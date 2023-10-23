@@ -1,6 +1,7 @@
 "use client"
 import FaqComponent from "@/components/sections/FaqComponent";
 import PageTransition from "@/components/transitions/PageTransition";
+import { ToastContainer } from "react-toastify";
 
 const index = () => {
   return (
@@ -10,6 +11,8 @@ const index = () => {
       
         <PageTransition />
         <FaqComponent/>
+        <ToastContainer />
+        
     </div>
     </>
   )

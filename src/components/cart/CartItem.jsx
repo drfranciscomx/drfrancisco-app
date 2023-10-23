@@ -28,7 +28,7 @@ const CartItem = () => {
     
   return (
       <div className='flex flex-col gap-y-2'>
-          <div className='text-xs font-normal md:hidden inline-flex items-center justify-between  bg-white py-3 px-5'>
+          <div className='text-xs font-normal md:hidden inline-flex items-center justify-between   bg-gray-200 py-3 px-5'>
             <p className='text-black w-1/4'>Procedimiento</p>
             <p className='flex items-center justify-start w-1/4'>Deposito Inicial</p>
             <p className='flex items-center justify-center w-1/4'>Descripción</p>
@@ -39,7 +39,7 @@ const CartItem = () => {
             {
                 productData?.map((item ) => (
                     
-                    <div key={item?._id} className='w-full bg-white p-4 flex sm:flex-col flex-row items-center gap-4'>
+                    <div key={item?._id} className='w-full bg-gray-300 p-4 flex sm:flex-col flex-row items-center gap-4'>
                         <div className='flex items-center gap-x-3 w-full '>
                             <span onClick={()=> dispatch(deleteProduct(item?._id))} className='text.lg hover:text-red-600 cursor-pointer duration-300'>
                                 <AiOutlineClose />

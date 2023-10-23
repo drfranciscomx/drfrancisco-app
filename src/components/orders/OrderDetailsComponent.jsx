@@ -30,9 +30,9 @@ const OrderDetailsComponent = () => {
     
   }, [orderData.order])
   return (
-    <div>
+    <div className='min-h-[100vh]'>
       {
-        orderData?.order && orderData?.order.length > 0 ?  <ContainerComponent className={ 'mx-auto bg-white px-40 h-[100%]'} >
+        orderData?.order && orderData?.order.length > 0 ?  <ContainerComponent className={ 'mx-auto bg-white px-40 '} >
         <div className=''>
            <div className='grid grid-cols-7 uppercase text-sm font-medium py-2 border-b-[1px] border-b-gray-300'>
              <p className='col-span-4'>Procedimientos</p>
