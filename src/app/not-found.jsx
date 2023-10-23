@@ -2,7 +2,7 @@ import ContainerComponent from "@/components/containers/ContainerComponent";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import noPageImage from "@/images/DrFRodriguez-logo.png"
+import noPageImage from "@/images/DrFRodriguez-logo.webp"
 
 const NotFoundPage = () => {
   return (

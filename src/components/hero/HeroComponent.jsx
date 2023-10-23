@@ -3,9 +3,9 @@ import { useRef, useEffect } from "react";
 import AnimatedText from "./AnimatedText";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import Image from "next/image";
-import arrowimage from "@/images/arrow-9.png"
-import mainimage from "@/images/highqltysalvadornoback-1.png"
-import starsimages from "@/images/stars.png"
+import arrowimage from "@/images/arrow-9.webp"
+import mainimage from "@/images/highqltysalvadornoback-1.webp"
+import starsimages from "@/images/stars.webp"
 
 const imagevariants = {
   initial:{

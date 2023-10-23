@@ -36,7 +36,7 @@ const TeamComponemt = (credentials) => {
         style={{objectFit: "contain"}}
         className="relative max-w-full md:max-h-[300px] w-auto"
         alt=""
-        src="/undefined3.png"
+        src="/undefined3.webp"
       />
       </motion.div>
       
@@ -56,7 +56,7 @@ const TeamComponemt = (credentials) => {
           <Image width={20} height={20}
             className="w-auto absolute top-[0px] left-[0px]  object-cover"
             alt=""
-            src="/frame.png"
+            src="/frame.webp"
           />
           <div className="relative top-[0px] left-[29.96px] leading-[146%] font-medium inline-block w-[262px]">
             4.9/5 Reseñas Positivas
@@ -66,7 +66,7 @@ const TeamComponemt = (credentials) => {
           <Image width={20} height={20}
             className="absolute top-[0px] left-[0px]w-auto  object-cover"
             alt=""
-            src="/frame.png"
+            src="/frame.webp"
           />
           <div className="relative top-[0px] left-[29.96px] leading-[146%] font-medium inline-block w-[262px]">
             Capacitacion Continua
@@ -76,7 +76,7 @@ const TeamComponemt = (credentials) => {
           <Image width={20} height={20}
             className="absolute top-[0px] left-[0px] w-auto  object-cover"
             alt=""
-            src="/frame.png"
+            src="/frame.webp"
           />
           <div className="relative top-[0px] left-[29.96px] leading-[146%] font-medium inline-block w-[262px]">
           Tecnologia de Punta

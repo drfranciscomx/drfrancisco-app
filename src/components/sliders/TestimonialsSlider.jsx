@@ -69,7 +69,7 @@ const TestimonialsSlider = () => {
                             <Image width={200} height={20} quality={100}
                               className="relative flex flex-row top-[21.94px] left-[17.37px] w-[146.29px] h-[32.91px] object-cover"
                               alt=""
-                              src="/stars1.png"
+                              src="/stars1.webp"
                             />
                             <div className="relative flex flex-row  top-[-35.94px] left-[168.23px] text-6xl leading-[146%] font-medium text-gainsboro-100 w-[39.31px] h-[31.09px] text-white">
                               {testimonial.rating}
@@ -86,7 +86,7 @@ const TestimonialsSlider = () => {
                             {/* <Image width={50} height={50} quality={100}
                               className="flex flex-row pl-3 w-[52.11px] h-[52.11px] object-cover mr-4"
                               alt=""
-                              src="/testimonial-1-avatar.png"
+                              src="/testimonial-1-avatar.webp"
                             /> */}
                           <div className="flex flex-col pl-3">
                               <div className="leading-[146%] text-gray-300 font-headerFont font-medium inline-block">

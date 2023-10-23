@@ -1,34 +1,34 @@
 export const testimonials = [
     {
-        image: '/testimonial-2-avatar1.png',
+        image: '/testimonial-2-avatar1.webp',
         name: 'María González',
         rating: '5',
         position: 'Paciente',
         message: 'El Dr. Francisco Rodríguez es un cirujano excepcional. Me hizo sentir cómoda y segura desde la primera consulta. Mi cirugía fue un éxito, y estoy encantada con los resultados. ¡Gracias, Dr. Rodríguez!'
     },
     {
-        image: '/testimonial-3-avatar1.png',
+        image: '/testimonial-3-avatar1.webp',
         name: 'Carlos Morales',
         rating: '4.9',
         position: 'Paciente',
         message: 'Mi experiencia con el Dr. Rodríguez superó mis expectativas. Su equipo es muy profesional, y el resultado de mi cirugía plástica es asombroso. Me siento más confiado que nunca.'
     },
     {
-        image: '/testimonial-4-avatar1.png',
+        image: '/testimonial-4-avatar1.webp',
         name: 'Laura Pérez',
         rating: '4.7',
         position: 'Paciente',
         message: 'Estoy muy agradecida con el Dr. Francisco Rodríguez. Mi cirugía de rejuvenecimiento facial ha cambiado mi vida. No puedo creer lo bien que me veo. Lo recomiendo ampliamente.'
     },
     {
-        image: '/testimonial-5-avatar1.png',
+        image: '/testimonial-5-avatar1.webp',
         name: 'Javier Cárdenas',
         rating: '5',
         position: 'Paciente',
         message: 'El Dr. Rodríguez es un experto en su campo. Me operó la nariz y los resultados son espectaculares. Su atención y cuidado son insuperables. Estoy más que satisfecho.'
     },
     {
-        image: '/testimonial-6-avatar1.png',
+        image: '/testimonial-6-avatar1.webp',
         name: 'Isabel Ramírez',
         rating: '4.8',
         position: 'Paciente',

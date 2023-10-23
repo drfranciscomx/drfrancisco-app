@@ -195,7 +195,7 @@ const DetailsPage = (ctx) => {
                   
                     <Image
                       ref={imageRef}
-                      src={  product?.imageUrls ? (product.imageUrls[0]) : "/images/faq@3x.png" }
+                      src={  product?.imageUrls ? (product.imageUrls[0]) : "/images/faq@3x.webp" }
                       alt="product image"
                       className="rounded-lg object-cover w-auto h-auto"
                       width={700}

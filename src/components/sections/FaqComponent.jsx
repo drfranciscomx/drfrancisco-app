@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const FaqComponent = () => {
   return (
-    <section className="pb-20 pt-10 px-20 md:px-1 w-full h-[100%] md:h-full  flex flex-row  box-border items-center justify-center bg-[url('/faq@3x.png')] bg-cover bg-no-repeat bg-[top] text-left text-base text-gray-white font-playfair-display">
+    <section className="pb-20 pt-10 px-20 md:px-1 w-full h-[100%] md:h-full  flex flex-row  box-border items-center justify-center bg-[url('/faq@3x.webp')] bg-cover bg-no-repeat bg-[top] text-left text-base text-gray-white font-playfair-display">
       <div className="w-[95%] flex flex-row md:flex-col my-[60px]">
 
         {/* Contact */}

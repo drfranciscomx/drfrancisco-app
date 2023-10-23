@@ -79,7 +79,7 @@ const ContactForm = (credentials) => {
                 className="w-[30.5px] sm:w-[25.5px] h-full object-cover"
                 width={30} height={30}
                 alt=""
-                src="/arrow-5.png"
+                src="/arrow-5.webp"
               />
             </div>
           </motion.button>

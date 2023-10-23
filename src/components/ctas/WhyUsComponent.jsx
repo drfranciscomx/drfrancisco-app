@@ -88,7 +88,7 @@ const WhyUsComponent = () => {
           <Image width={500} height={650} quality={100}
             className="max-w-[100%]  relative my-0 z-[1] lg:top-[15px] w-auto h-auto"
             alt="Dr Francisco Rodriguez"
-            src="/frame-79.png"
+            src="/frame-79.webp"
           />
        
       </motion.div>

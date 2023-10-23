@@ -9,7 +9,7 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/liposuction2.jpg",
+          "/liposuction2.webp",
         ],
         "rating": 4,
         "quantity": 1,
@@ -25,8 +25,8 @@ export const localproducts = [
         "promoPrice": 165000,
         "published": true,
         "imageUrls": [
-          "/Abdominoplastia-y-Liposuccion.jpeg",
-          "/liposuction_abdominoplasty2.jpg"
+          "/Abdominoplastia-y-Liposuccion.webp",
+          "/liposuction_abdominoplasty2.webp"
         ],
         "rating": 5,
         "quantity": 1,
@@ -42,8 +42,8 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/implantes-de-mama-01.jpg",
-          "/breast_implants2.jpg"
+          "/implantes-de-mama-01.webp",
+          "/breast_implants2.webp"
         ],
         "rating": 4,
         "quantity": 1,
@@ -59,8 +59,8 @@ export const localproducts = [
         "promoPrice": 100000,
         "published": true,
         "imageUrls": [
-          "/Levantamiento-de-senos-con-implantes-de-mama-01.png",
-          "/bust_lift_implants2.jpg"
+          "/Levantamiento-de-senos-con-implantes-de-mama-01.webp",
+          "/bust_lift_implants2.webp"
         ],
         "rating": 5,
         "quantity": 1,
@@ -76,8 +76,8 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/levantaiento-de-senos.jpg",
-          "/bust_lift_no_implants2.jpg"
+          "/levantaiento-de-senos.webp",
+          "/bust_lift_no_implants2.webp"
         ],
         "rating": 4,
         "quantity": 1,
@@ -93,8 +93,8 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/rhinoplasty1.png",
-          "/rhinoplasty2.jpg"
+          "/rhinoplasty1.webp",
+          "/rhinoplasty2.webp"
         ],
         "rating": 5,
         "quantity": 1,
@@ -110,8 +110,8 @@ export const localproducts = [
         "promoPrice": 300000,
         "published": true,
         "imageUrls": [
-          "/mommy_makeover1.jpg",
-          "/mommy_makeover2.jpg"
+          "/mommy_makeover1.webp",
+          "/mommy_makeover2.webp"
         ],
         "rating": 5,
         "quantity": 1,
@@ -128,7 +128,7 @@ export const localproducts = [
         "published": true,
         "imageUrls": [
           "/liposuction1jpg",
-          "/Abdominoplastia1.png"
+          "/Abdominoplastia1.webp"
         ],
         "rating": 4,
         "quantity": 1,

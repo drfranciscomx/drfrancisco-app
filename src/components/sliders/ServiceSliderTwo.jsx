@@ -9,9 +9,9 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import slide_image from "@/images/card23x.png" 
-import slide_image2 from "@/images/card3@3x.png"
-import slide_image3 from "@/images/card4@3x.png"
+import slide_image from "@/images/card23x.webp" 
+import slide_image2 from "@/images/card3@3x.webp"
+import slide_image3 from "@/images/card4@3x.webp"
 import Image from "next/image";
 
 export const serviceData = [
