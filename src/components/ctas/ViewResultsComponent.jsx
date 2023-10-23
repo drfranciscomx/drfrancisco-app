@@ -45,7 +45,7 @@ const ViewResultsComponent = () => {
                   transition={{duration: 0.7}} 
                   className="w-[70%] sm:w-[95%] mx-auto pb-20 items-center [transform:_rotate(-0.24deg)] [transform-origin:0_0]">
                 
-                  <ReactCompareImage leftImage="/Tummy-Tuck-Before.jpg" rightImage="/Tummy-Tuck-After.jpg" className="relative rounded-3xs w-full h-[493.42px] "/>
+                  <ReactCompareImage leftImage="/Tummy-Tuck-Before.webp" rightImage="/Tummy-Tuck-After.webp" className="relative rounded-3xs w-full h-[493.42px] "/>
 
             </motion.div>
       </div>
