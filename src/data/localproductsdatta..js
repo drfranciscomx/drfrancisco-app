@@ -9,6 +9,7 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
+          "/liposuction1.webp",
           "/liposuction2.webp",
         ],
         "rating": 4,
@@ -43,7 +44,7 @@ export const localproducts = [
         "published": true,
         "imageUrls": [
           "/implantes-de-mama-01.webp",
-          "/breast_implants2.webp"
+          "/implantes-de-mama-02.webp"
         ],
         "rating": 4,
         "quantity": 1,
@@ -60,7 +61,7 @@ export const localproducts = [
         "published": true,
         "imageUrls": [
           "/Levantamiento-de-senos-con-implantes-de-mama-01.webp",
-          "/bust_lift_implants2.webp"
+          "/Levantamiento-de-senos-con-implantes-de-mama-02.webp"
         ],
         "rating": 5,
         "quantity": 1,
@@ -77,7 +78,7 @@ export const localproducts = [
         "published": true,
         "imageUrls": [
           "/levantaiento-de-senos.webp",
-          "/bust_lift_no_implants2.webp"
+          "/levantaiento-de-senos2.webp"
         ],
         "rating": 4,
         "quantity": 1,
@@ -127,8 +128,8 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/liposuction1jpg",
-          "/Abdominoplastia1.webp"
+          "/Abdominoplastia1.webp",
+          "/Abdominoplastia2.webp"
         ],
         "rating": 4,
         "quantity": 1,
