@@ -10,8 +10,8 @@ async function connect() {
 
     try {
         // check the MongoDB URI
-        if (!MONGODB_URI) {
-            throw new Error(`Define the MONGODB_URI environmental variable ${MONGODB_URI}`);
+        if (!MONGOOSE_URL) {
+            throw new Error(`Define the MONGODB_URI environmental variable ${MONGOOSE_URL}`);
         }
         await mongoose.connect(MONGOOSE_URL, {
             useNewUrlParser: true,
