@@ -1,8 +1,6 @@
 "use client"
 import AnimatedText from "../texts/AnimatedText";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import ServiceSlider3D from "../sliders/ServiceSliderTwo";
 
 const MainServicesComponent = () => {
  
