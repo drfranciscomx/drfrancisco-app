@@ -29,7 +29,7 @@ export default function index() {
                         whileTap={{ y:1 }} 
                         transition={{duration: 0.09}}
                           className="[text-decoration:none] rounded bg-ghostwhite flex flex-col p-2 items-center justify-center border-[1px] border-solid border-gray-white"
-                          href="https://linkedin.com"
+                          href="https://www.linkedin.com/in/drfrancisco-rodriguez-336771297/"
                         >
                           <FaLinkedin color='#ffffff' size={20}/>
 

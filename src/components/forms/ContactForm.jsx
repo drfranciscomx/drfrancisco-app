@@ -31,6 +31,7 @@ const ContactForm = (credentials) => {
 
   const [data, setData] = useState({from_name:"", email:"", message:"", tel:""});
   const handleFormChange = (event) => {
+    console.log(event);
     const from_name = event.target.name;
     const value = event.target.value;
     setData({...data, [from_name]: value})

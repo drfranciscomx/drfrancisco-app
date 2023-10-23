@@ -17,7 +17,7 @@ export default function MobileMenuComponent() {
 
   return (
     <>
-    <div className={`${styles.main} hidden md:block`}>
+    <div className={` hidden md:block`}>
 
       <div className={`${styles.header}`}>
         <div onClick={() => {SetIsActive(!isActive)}} className={styles.button}>
