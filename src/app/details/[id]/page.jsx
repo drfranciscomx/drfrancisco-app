@@ -30,7 +30,7 @@ const DetailsPage = (ctx) => {
     const imageRef = useRef(null)
 
     const setImgPreview = (image) => {
-        imageRef.current.src = image
+        imageRef.current.srcset = image
     }
 
     const [isLoading, setIsLoading] = useState(false)
@@ -183,8 +183,8 @@ const DetailsPage = (ctx) => {
          
         <div className='w-[95%] mx-auto wrapper-class gap-5 bg-stone-900 bg-opacity-80 p-4 rounded-lg'>
           <div className='flex md:flex-col-reverse flex-row'>
-          <div className='w-2/3 images-grouped-class justify-end flex flex-col '>
-              <div className='flex items-end  justify-end h-full '>
+          <div className='w-2/3 md:w-full images-grouped-class justify-end flex flex-col '>
+              <div className=' loader-class flex items-center  justify-center h-full w-full'>
                 { isLoading ? <div className={`${classes.loader} absolute h-20 `} /> 
                     : <motion.div 
                     initial={{x:-50, opacity:0 }} 
@@ -197,7 +197,7 @@ const DetailsPage = (ctx) => {
                       ref={imageRef}
                       src={  product?.imageUrls ? (product.imageUrls[0]) : "/images/faq@3x.webp" }
                       alt="product image"
-                      className="rounded-lg object-cover w-auto h-auto"
+                      className="rounded-lg object-cover ease-in-out duration-500"
                       width={700}
                       height={700}
                     />
@@ -205,8 +205,8 @@ const DetailsPage = (ctx) => {
                   }
               </div>
             
-              <div className='flex flex-row justify-end items-end gap-4 mt-2 pl-20 sm:px-2 image-slider-class h-full'>
-                { isLoading ? <div className={`${classes.loader} absolute h-20 `} /> 
+              <div className='image-slider-class flex flex-row justify-center items-center gap-4 mt-2 pl-20 sm:px-2 image-slider-class h-full'>
+                { isLoading ? <div className={`${classes.loader} absolute h-20`} /> 
                     : <Swiper
                         // install Swiper modules
                         modules={[ Pagination, A11y, Autoplay]}
@@ -215,7 +215,7 @@ const DetailsPage = (ctx) => {
                         autoplay={true}
                         onSwiper={(swiper) => console.log()}
                         onSlideChange={() => console.log('')}
-                        className='w-full cursor-pointer'
+                        className='w-full '
                       >
                         {
                           product?.imageUrls && product.imageUrls.map(( image, index ) => (
@@ -226,9 +226,9 @@ const DetailsPage = (ctx) => {
                                     <Image
                                       src={ image ? image : "" }
                                       alt="product image"
-                                      className="rounded-lg w-150 h-150 p-1"
-                                      width={250}
-                                      height={250}
+                                      className="rounded-lg w-full h-full p-1"
+                                      width={500}
+                                      height={500}
                                     />
                                   </a>
                               </SwiperSlide>
@@ -308,7 +308,7 @@ const DetailsPage = (ctx) => {
                 whileHover={{ scale: 1.07 }}
                 whileTap={{ scale: 0.9 }}
                 className="bg-gold-gradient flex flex-row items-center justify-between px-4 py-2 text-sm gap-x-4 tracking-wide rounded-full text-black hover:bg-darkText  duration-500"
-                onClick={() => dispatch(addToCart(product)) && toast.success(`${product?.title.substring(0,15)}... added successfully!`, {
+                onClick={() => dispatch(addToCart(product)) && toast.success(`${product?.title.substring(0,15)}... se agrego al carrito`, {
                   position: toast.POSITION.TOP_CENTER
                 })}
               >

@@ -69,12 +69,12 @@ export default function Navi() {
   return (
     <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className={`${styles.menu} bg-transparent `}>
          {/* Cart Button */}
-         <Link href={"/cart"} className=' absolute left-5 '>
+         <Link href={"/cart"} className=' absolute left-5 top-10'>
             <div className='bg-black mt-5 hover:bg-stone-950 rounded-full text-slate-100 hover:text-white flex items-center justify-cstart gap-x-1 px-3 py-1.5 border-[1px]  border-black hover:border-yellow-600 cursor-pointer duration-500 ease-in-out'>
               
               <IoMdCart className='text-lg' />
               <p className='text-base font-semibold'><FormatedPrice amount={totalAmt ? totalAmt : 0}/></p>
-              
+
               <span className='bg-white text-black text-center rounded-full font-extrabold text-sm relative -right-2 -top-2 flex items-center justify-center w-5 h-5 shadow-xl '>
               {productData ? productData?.length : 0}
               </span>
@@ -86,7 +86,7 @@ export default function Navi() {
                     <div className={`${styles.header}`}>
                        
                     </div>
-                    <div className='text-xl font-headerFont py-10 flex flex-col gap-y-6'>
+                    <div className='text-xl font-headerFont pt-10 flex flex-col gap-y-6'>
                     {
                       navItems.map( (data, index) => {
                         return <CustomLink key={index} data={{...data, index}} isActive={selectedIndicator == data.href} setSelectedIndicator={setSelectedIndicator}></CustomLink>
