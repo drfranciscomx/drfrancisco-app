@@ -23,7 +23,7 @@ const BackToTopButton = () => {
         });
     };    
 
-  return <button onClick={() => goTop()} className="btn-scrollTop bg-white fixed bottom-10 text-x2l z-[20] cursor-pointer right-14 bg-none rounded-full p-2 border-none opacity-70" style={{display: isVisible ? 'block':'none'}}>
+  return <button onClick={() => goTop()} className="btn-scrollTop bg-white fixed bottom-5 text-x2l z-[20] cursor-pointer right-6 bg-none rounded-full p-2 border-none opacity-70" style={{display: isVisible ? 'block':'none'}}>
   <FaArrowCircleUp className='text-xl'/>
 </button>
 }

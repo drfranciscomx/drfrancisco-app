@@ -38,7 +38,7 @@ const AnimatedNumbers= ({ value }) => {
 
 const WhyUsComponent = () => {
   return (
-    <section className="mb-11 px-20 sm:px-5 w-[100%] rounded-26xl flex flex-row flex-wrap pt-[140px] sm:pt-10 sm:pt-[120px] pb-0 box-border  justify-between text-left text-14xl text-gray-white font-poppins">
+    <section className="mb-11 px-20 sm:px-5 w-[100%] rounded-26xl flex flex-row flex-wrap pt-[140px] sm:pt-10 pb-0 box-border  justify-between text-left text-14xl text-gray-white font-poppins">
       <div className="w-[50%] md:min-w-[100%] flex flex-col flex-wrap items-start justify-start gap-[30px] mb-11">
         <motion.div
         initial={{y:30, opacity:0 }} 

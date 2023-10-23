@@ -10,10 +10,7 @@ const acerca = () => {
   return (
     <>
     <PageTransition />
-        <Head>
-            <title>Dr Francisco Rodriguez | Acerca </title>
-            <meta name="Cirguia Plastoca" content="Cirugias esteticas, inyectables, liposuciones"></meta>
-        </Head>
+       
         <WhyUsComponent /> 
       <EducationComponent />
     </>

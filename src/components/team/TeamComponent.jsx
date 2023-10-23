@@ -4,12 +4,8 @@ import { motion } from "framer-motion";
 import ContactCompnt from "../forms/ContactCompnt";
 import Image from "next/image";
 
-const TeamComponemt = (credentials) => {
+const TeamComponemt = () => {
   
-  const templateid = credentials.templateID
-    const serviceid = credentials.serviceID
-    const publickey = credentials.publicKEY
-    
   return (
     
     <section className="flex flex-col m:px-[20px] px-5 box-border items-center justify-center gap-[30px] text-center  h-full text-gray-white font-roboto">
@@ -34,7 +30,7 @@ const TeamComponemt = (credentials) => {
         quality={100}
         sizes="(max-width: 768px) 100vw"
         style={{objectFit: "contain"}}
-        className="relative max-w-full md:max-h-[300px] w-auto"
+        className="relative max-w-full md:max-h-[300px] w-auto mx-auto"
         alt=""
         src="/undefined3.webp"
       />
@@ -84,7 +80,7 @@ const TeamComponemt = (credentials) => {
         </div>
      
       </div>
-      <ContactCompnt templateID={templateid} serviceID={serviceid} publicKEY={publickey}/>
+      
     </section>
   );
 };

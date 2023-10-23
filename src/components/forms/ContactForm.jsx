@@ -18,13 +18,10 @@ const ContactForm = (credentials) => {
    const publicKey = credentials.publicKEY
    
   const sendEmail = async (e) => {
-    
+    console.log("Event at form send:*************" , e);
     e.preventDefault();
-
-    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
-   
     
-      .then(() => {
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(() => {
           setData({from_name:"", email:"", message:"", tel:""})
       }, (error) => {
           console.log(error.text);
@@ -46,10 +43,8 @@ const ContactForm = (credentials) => {
     initial={{y:30, opacity:0 }} 
     whileInView={{y:0, opacity: 1 }} 
     transition={{duration: 0.5}} 
-    method='post' onSubmit={(e) => sendEmail && toast.success(`El mensaje se envio exitosamente.`, {
-      position: toast.POSITION.TOP_CENTER
-    })}
-    className={`flex flex-col gap-y-2 w-[100%]`}>
+    method='post' onSubmit={(e) => sendEmail}
+    className={`flex flex-col gap-y-2 w-[80%] mx-auto`}>
       <div className='flex flex-row gap-x-2'>
       <input className='inputFields w-full py-5 px-2 bg-stone-950 text-white font-bodyFont focus:outline-none' type="text" value={data.from_name} name='from_name' onChange={handleFormChange} id='from_name_id' placeholder='Nombre' />
       <input className='inputFields w-full py-5 px-2  bg-stone-950 text-white font-bodyFont focus:outline-none' type="email" value={data.email} name='email' onChange={handleFormChange} id='email_id' placeholder='Email'/>
@@ -87,7 +82,6 @@ const ContactForm = (credentials) => {
       </motion.div>
      
     </motion.form>
-     <ToastContainer />
      </>
   )
 }

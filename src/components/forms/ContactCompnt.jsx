@@ -1,10 +1,14 @@
 import React from 'react'
 import ContactForm from './ContactForm'
+import { getEmailJsServersideProps } from '@/app/db/emailjs'
 
-const ContactCompnt = (credentials) => {
-  const templateid = credentials.templateID
-  const serviceid = credentials.serviceID
-  const publickey = credentials.publicKEY
+
+const ContactCompnt = async () => {
+  const props = await getEmailJsServersideProps()
+  const templateid = props.templateid
+  const serviceid = props.serviceid
+  const publickey = props.publickey
+
   return (
     <div className='flex flex-row md:flex-col '>
       <div className='w-full z-10'>
