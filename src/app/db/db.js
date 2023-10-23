@@ -1,3 +1,4 @@
+const MONGOOSE_URL = process.env.MONGO_URL;
 import mongoose from 'mongoose';
 
 const connection = {};
@@ -8,7 +9,11 @@ async function connect() {
     }
 
     try {
-        await mongoose.connect(process.env.MONGO_URL, {
+        // check the MongoDB URI
+        if (!MONGODB_URI) {
+            throw new Error(`Define the MONGODB_URI environmental variable ${MONGODB_URI}`);
+        }
+        await mongoose.connect(MONGOOSE_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
