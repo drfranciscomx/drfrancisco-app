@@ -62,6 +62,30 @@ export const options = {
         signIn: "/login"
     },
     callbacks: {
+        async signIn({user, account }){
+            if (account?.provider == "credentials") {
+                return true
+            }
+            if (account?.provider == "google") {
+                await db.connect()
+                try {
+                    console.log(user.email);
+                    const existinguser = await User.findOne({email: user.email})
+                    if (!existinguser) {
+                        const newUser = new User({
+                            email: user.email
+                        })
+
+                        await newUser.save()
+                        return true
+                    }
+                    return true
+                } catch (error) {
+                    console.log("error saving google user", error);
+                    return false
+                }
+            }
+        },
         async jwt({token, user}){
             if (user) {
                 token.accessToken = user.accessToken

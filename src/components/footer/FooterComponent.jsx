@@ -30,16 +30,16 @@ const FooterComponent = () => {
                 whileTap={{ y:1 }} 
                 transition={{duration: 0.09}}
                   className="[text-decoration:none] relative leading-[24px] text-[inherit]"
-                  href="teL:+526863388341"
+                  href="teL:+523511091423"
                 >
-                  Llama al : +52 (686) 338 8341
+                  Llama al : +52 (351) 109 1423
                 </motion.a>
-                <Link href={'https://maps.app.goo.gl/2uCrGpKkyKS8pvBb6'} target="_blank">
+                <Link href={'https://maps.app.goo.gl/DB5yDk2vo8LgSE158'} target="_blank">
                   <div className="relative leading-[24px] flex items-end ">
                     <span className="[line-break:anywhere] w-full">
-                      <p className="m-0">{`Colón Oriente 265 Int 104, `}</p>
-                      <p className="m-0">{`Edificio María y José, `}</p>
-                      <p className="m-0">colonia centro, cp 59680</p>
+                      <p className="m-0">{`Calz. Zamora-Jacona 716, `}</p>
+                      <p className="m-0">{`2ndo piso, Jacona de Plancarte, Mich.`}</p>
+                      <p className="m-0">Fraccionamiento El Ensueño, cp 59813</p>
                     </span>
                   </div>
 
@@ -52,10 +52,10 @@ const FooterComponent = () => {
                   whileTap={{ y:1 }} 
                   transition={{duration: 0.09}}
                     className="[text-decoration:none] relative leading-[24px] text-[inherit]"
-                    href="mailto:drfranciscocirugiaplastica@gmail.com"
+                    href="mailto:plasticsurgeryzamora@gmail.com"
                     target="_blank"
                   >
-                    drfrancisco@gmail.com
+                   plasticsurgeryzamora@gmail.com
                   </motion.a>
               </motion.div>
               {/* Social Links */}

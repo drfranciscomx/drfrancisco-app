@@ -15,7 +15,7 @@ const ListProducts = async ( searchParams ) => {
         <div className="flex md:flex-col flex-row  w-[90%]">
         
           <div className=" md:w-full justify-center items-center gap-x-5">
-            <main className=" grid grid-cols-4 md:grid-cols-2 lg:grid-cols-3 mdsm:grid-cols-2 sm:grid-cols-1 gap-10">
+            <main className=" grid grid-cols-4 md:grid-cols-2 lg:grid-cols-3 mdsm:grid-cols-2 sm:grid-cols-1 gap-10 px-10">
             
               {localProcuts?.map((product) => (
                 

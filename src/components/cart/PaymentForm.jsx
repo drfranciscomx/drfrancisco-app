@@ -10,6 +10,8 @@ import { useSession, signIn } from 'next-auth/react'
 import { loadStripe } from '@stripe/stripe-js';
 import { useDispatch } from 'react-redux';
 import { resetCart, saveOrder } from '@/redux/shoppingSlice';
+import trustfactorimage from "@/images/stripe-badge-transparente.webp"
+import Image from 'next/image';
 
 
 const PaymentForm = () => {
@@ -111,7 +113,7 @@ const PaymentForm = () => {
                     {/** Login/Register */}
                     {
 
-                        !session &&  (<div onClick={ () => signIn() } className=' w-1/4 md:w-2/3 sm:w-full bg-black text-slate-100 mt-4 py-3 px-6 hover:bg-yellow-700 duration-500 cursor-pointer'>
+                        !session &&  (<div onClick={ () => signIn() } className=' w-1/4 md:w-2/3 sm:w-full bg-black text-slate-100 mt-4 py-3 px-6 hover:bg-yellow-600 duration-500 cursor-pointer'>
                         <div className='flex flex-row justify-center items-center gap-x-3 '>
                             <AiOutlineUser className="text-ld" />
                             <p className='text-sm font-base'>Iniciar/Registro</p>
@@ -122,6 +124,9 @@ const PaymentForm = () => {
                 </div>
             )
         }
+        <div className='trustfactor-class'>
+            <Image src={trustfactorimage} width={500} height={200} alt='Stripe Payment' />
+        </div>
   </div>
   )
 }

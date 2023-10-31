@@ -4,7 +4,7 @@ const TerminosPage = () => {
   return (
     <div className='w-[80%] mx-auto py-10'>
     
-    <div className='mx-auto bg-white p-10 rounded-lg shadow-lg'>
+    <div className='mx-auto bg-gray-200 p-10 rounded-lg shadow-lg'>
         <h1 className='text-2xl font-bold mb-4'>Términos del Servicio</h1>
 
         <p className='mb-4'>Este sitio web, www.drfranciscorodriguez.mx, (en adelante, el Sitio Web) es operado por el Dr. Francisco Rodriguez, un proveedor de servicios de cirugía plástica. Al acceder o utilizar este Sitio Web, usted acepta cumplir y quedar sujeto a los siguientes términos y condiciones. Lea estos términos detenidamente antes de usar el Sitio Web.</p>
@@ -58,7 +58,7 @@ const TerminosPage = () => {
         <ul className='list-disc pl-8'>
             <li>Teléfono: +52 (686) 338 8341</li>
             <li>Dirección: Colón Oriente 265 Int 104, Edificio María y José, Colonia Centro, CP 59680</li>
-            <li>Correo Electrónico: drfrancisco@gmail.com</li>
+            <li>Correo Electrónico: plasticsurgeryzamora@gmail.com</li>
         </ul>
     </div>
 

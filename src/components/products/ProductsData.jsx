@@ -42,25 +42,34 @@ const ProductsData = ({ item }) => {
             />
               
               {item?.isPromo && (
-                <span className="absolute top-2 right-2 font-medium text-xs py-1 px-3 rounded-full bg-white group-hover:bg-yellow-600 group-hover:text-white duration-200">
+                <span className="absolute top-2 right-2  border-[1px] border-yellow-600 font-medium text-xs py-1 px-3 rounded-full bg-black text-yellow-500 group-hover:bg-yellow-600 group-hover:text-white duration-200">
                 Promo
               </span>
             )}
+              {
+                      item?.promoPrice ? <div>
+                      <div className="absolute top-2 left-2  border-[1px] border-yellow-600 w-fit py-1 px-4 rounded-full text-xs bg-black text-yellow-500 group-hover:bg-yellow-600 group-hover:text-white duration-200">
+                        <p>{calculatePercentage(item?.deposit, item?.promoPrice)}% menos</p>
+                      </div>
+                </div>: ""
+              }
           </div>
         </a>
         <div className="border-[1px] border-gray-800 border-t-0 px-4 py-4 flex flex-col gap-y-2 bg-black rounded-b-lg">
             {/* star icons
             <div className="flex items-center gap-x-1">{startArray}</div> */}
           <p className="text-white tracking-widest">{item?.title}</p>
-          <div className="flex items-center justify-between">
-            {/* <div className="border-[1px] border-yellow-600 py-1 px-4 rounded-full text-xs">
-              <p>{calculatePercentage(item?.price, item?.oldPrice)}% menos</p>
-            </div> */}
+          <div className="pricing-class">
+            {
+                    item?.promoPrice ?   <div>
+                    <div className="flex items-center gap-x-2">
+                      <p className="line-through text-sm text-white font-bodyFont">
+                        <FormatedPrice amount={item?.promoPrice} />
+                      </p>
+                    </div>
+              </div>: ""
+            }
             <div className="flex flex-col gap-y-1">
-              <p className="text-slate-500 line-through text-sm">
-                {/* <FormatedPrice amount={item?.oldPrice} /> */}
-              </p>
-              
               <p className="font-semibold text-white tracking-wider text-2xl">
                 <FormatedPrice amount={item?.deposit} />
               </p>

@@ -16,12 +16,12 @@ export const POST = async (request) => {
                 product_data: {
                     name: item.title,
                     description: item.description,
-                    images: item.images,
+                    images: item.imageUrls,
                 },
             },
+            
 
         }));
-
 
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ['card'],

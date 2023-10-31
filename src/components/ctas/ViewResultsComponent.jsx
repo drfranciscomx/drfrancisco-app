@@ -8,14 +8,14 @@ import Link from 'next/link';
 
 const ViewResultsComponent = () => {
   return (
-    <section className=" w-full grid grid-cols-2 sm:grid-cols-1  pt-[140px] items-center ">
-        <div className='w-[90%]  items-center text-right'>
+    <section className=" w-full grid grid-cols-2 sm:grid-cols-1  pt-[140px] items-center px-5">
+        <div className='pl-10 md:pl-0'>
         <motion.div
           initial={{y:30, opacity:0 }} 
           whileInView={{y:0, opacity: 1 }} 
           transition={{duration: 0.7}} 
         >
-          <AnimatedText text={`Viualiza Los`} text2={`Resultados`} text3={`Naturales.`} className='text-white text-7xl font-headerFont sm:text-5xl'/>
+          <AnimatedText text={`Viualiza Los`} text2={`Resultados`} text3={`Naturales.`} className='text-white text-7xl font-headerFont md:text-5xl'/>
         </motion.div>
         
         <Link href={"/galeria"} className='justify-end'>
@@ -23,9 +23,9 @@ const ViewResultsComponent = () => {
               initial={{y:30, opacity:0 }} 
               whileInView={{y:0, opacity: 1 }} 
               transition={{duration: 0.8}} 
-              className="mt-4 px-20 sm:px-10 py-5 items-center  cursor-pointer bg-black [border:none] bg-[transparent] relative mb-10">
+              className="mt-4 px-20 md:px-10 py-5 items-center  cursor-pointer bg-black [border:none] bg-[transparent] relative mb-10">
             
-              <h4 className="m-0 flex flex-row  gap-x-2 items-center tracking-[0.05em] leading-[123%] font-medium font-barlow-condensed text-gray-white text-white text-2xl sm:text-base">
+              <h4 className="m-0 flex flex-row  gap-x-2 items-center tracking-[0.05em] leading-[123%] font-medium font-barlow-condensed text-gray-white text-white text-base">
                 Ver galeria 
                 <Image width={20} height={20}
                 className="w-[34.5px] h-[22.09px] object-cover"

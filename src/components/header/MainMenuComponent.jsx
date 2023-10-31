@@ -46,23 +46,22 @@ const MainMenuComponent = () => {
 
 
   return (
-    <header className="self-stretch w-[80%] flex flex-row px-20 box-border items-center justify-center sticky mx-auto ">
+    <header className="self-stretch flex flex-row px-1 box-border items-center justify-start sticky mx-auto ">
           {/* Logo  */}
-          <Link href={"/"} className='min-w-[150px] object-contain justify-center'>
         <LogoComponent/>
-        </Link>
         {/* Navigatio left */}
         <nav className='md:hidden m-0 flex-1  flex flex-row py-2.5 px-5 items-center justify-start gap-7 text-sm tracking-widest '>
             <CustomLink href="/servicios" title={`SERVICIOS`} className='text-gray-white no-underline font-bold'/>
             <CustomLink href="/faq" title={`PREGUNTAS`} className='text-gray-white no-underline'/>
             <CustomLink href="/testimonios" title={`TESTIMONIOS`} className='text-gray-white no-underline' />
+            <CustomLink href="/acerca" title={`ACERCA`} className='text-gray-white no-underline' />
+            <CustomLink href="/contacto" title={`CONTACTO`} className='text-gray-white no-underline' />
         </nav>
       
         
         <nav className='md:hidden m-0 flex-1  flex flex-row py-2.5 px-5 items-center  justify-end gap-7 font-poppins text-sm tracking-widest'>
            
-            <CustomLink href="/acerca" title={`ACERCA`} className='text-gray-white no-underline' />
-            <CustomLink href="/contacto" title={`CONTACTO`} className='text-gray-white no-underline' />
+            
              {/* Login/Register */}
               {
                   !session &&  ( <div onClick={ () => signIn() } className='cursor-pointer flex justify-center items-center gap-x-1'>

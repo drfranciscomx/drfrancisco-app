@@ -9,8 +9,8 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/liposuction1.webp",
-          "/liposuction2.webp",
+          "https://minio.salvawebpro.com:9000/drfrancisco/liposuction1.webp",
+          "https://minio.salvawebpro.com:9000/drfrancisco/liposuction2.webp",
         ],
         "rating": 4,
         "quantity": 1,
@@ -26,8 +26,8 @@ export const localproducts = [
         "promoPrice": 165000,
         "published": true,
         "imageUrls": [
-          "/Abdominoplastia-y-Liposuccion.webp",
-          "/liposuction_abdominoplasty2.webp"
+          "https://minio.salvawebpro.com:9000/drfrancisco/Abdominoplastia-y-Liposuccion.webp",
+          "https://minio.salvawebpro.com:9000/drfrancisco/liposuction_abdominoplasty2.webp"
         ],
         "rating": 5,
         "quantity": 1,
@@ -43,8 +43,8 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/implantes-de-mama-01.webp",
-          "/implantes-de-mama-02.webp"
+          "https://minio.salvawebpro.com:9000/drfrancisco/implantes-de-mama-01.webp",
+          "https://minio.salvawebpro.com:9000/drfrancisco/implantes-de-mama-02.webp"
         ],
         "rating": 4,
         "quantity": 1,
@@ -57,15 +57,15 @@ export const localproducts = [
         "category": "Cirugía Estética",
         "price": 5000,
         "isPromo": true,
-        "promoPrice": 100000,
+        "promoPrice": 120000,
         "published": true,
         "imageUrls": [
-          "/Levantamiento-de-senos-con-implantes-de-mama-01.webp",
-          "/Levantamiento-de-senos-con-implantes-de-mama-02.webp"
+          "https://minio.salvawebpro.com:9000/drfrancisco/Levantamiento-de-senos-con-implantes-de-mama-01.webp",
+          "https://minio.salvawebpro.com:9000/drfrancisco/Levantamiento-de-senos-con-implantes-de-mama-02.webp"
         ],
         "rating": 5,
         "quantity": 1,
-        "deposit": 120000
+        "deposit": 100000 
       },
       {
         "_id":  "65330d7f8151e96c6cf058da",
@@ -77,8 +77,8 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/levantaiento-de-senos.webp",
-          "/levantaiento-de-senos2.webp"
+          "https://minio.salvawebpro.com:9000/drfrancisco/levantaiento-de-senos.webp",
+          "https://minio.salvawebpro.com:9000/drfrancisco/levantaiento-de-senos2.webp"
         ],
         "rating": 4,
         "quantity": 1,
@@ -94,8 +94,8 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/rhinoplasty1.webp",
-          "/rhinoplasty2.webp"
+          "https://minio.salvawebpro.com:9000/drfrancisco/rhinoplasty1.webp",
+          "https://minio.salvawebpro.com:9000/drfrancisco/rhinoplasty2.webp"
         ],
         "rating": 5,
         "quantity": 1,
@@ -111,8 +111,8 @@ export const localproducts = [
         "promoPrice": 300000,
         "published": true,
         "imageUrls": [
-          "/mommy_makeover1.webp",
-          "/mommy_makeover2.webp"
+          "https://minio.salvawebpro.com:9000/drfrancisco/mommy_makeover1.webp",
+          "https://minio.salvawebpro.com:9000/drfrancisco/mommy_makeover2.webp"
         ],
         "rating": 5,
         "quantity": 1,
@@ -128,8 +128,8 @@ export const localproducts = [
         "promoPrice": 0,
         "published": true,
         "imageUrls": [
-          "/Abdominoplastia1.webp",
-          "/Abdominoplastia2.webp"
+          "https://minio.salvawebpro.com:9000/drfrancisco/Abdominoplastia1.webp",
+          "https://minio.salvawebpro.com:9000/drfrancisco/Abdominoplastia2.webp"
         ],
         "rating": 4,
         "quantity": 1,

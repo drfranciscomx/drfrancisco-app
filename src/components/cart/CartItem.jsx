@@ -23,7 +23,7 @@ function getFirstImage(imageUrls) {
 
 const CartItem = () => {
     const { productData } = useSelector((state) => state?.shopping);
-
+    console.log("productData", productData);
     const dispatch = useDispatch();
     
   return (
@@ -47,13 +47,13 @@ const CartItem = () => {
                             <Image src={item?.imageUrls[0]} width={500} height={500} alt='Imagen de Procedimiento' className='w-[50%] sm:w-full mdsm:w-2/3 h-30 object-cover'/>
                         </div>
                         {/* Model Value */}
-                        <div className='w-full flex  justify-start sm:items-center sm:justify-center'>
+                        <div className='w-full flex  justify-start sm:pl-7 '>
                             <p className='text-lg font-semibold'>
                                 <FormatedPrice amount={item?.quantity * item.price}/>
                             </p>
                         </div>
                         {/* Title and descripction */}
-                        <div className='w-full flex  justify-start sm:items-center sm:justify-center'>
+                        <div className='w-full flex  justify-start sm:pl-7'>
                            <div className='flex flex-col'>
                                 <p className='text-lg font-semibold justify-start'>
                                     {`${item?.title.substring(0,25)}...`}
@@ -63,8 +63,8 @@ const CartItem = () => {
                                 </p>
                            </div>
                         </div>
-                        <div className='flex  items-center justify-end gap-x-3 border-[1px] border-slate-300 py-2 px-4 w-auto'>
-                        <p className='text-md justify-start'>
+                        <div className='flex gap-x-3 border-[1px] border-slate-300 py-2 px-7 w-auto sm:w-full'>
+                        <p className='text-md '>
                         <FormatedPrice amount={item?.deposit}/>
                                 </p>
                         </div>

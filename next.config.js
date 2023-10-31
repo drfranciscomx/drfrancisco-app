@@ -4,6 +4,10 @@ const nextConfig = {
     images: {
         remotePatterns: [
             { hostname: 'minio.salvawebpro.com', protocol: 'https', port: '9000' }
+        ],
+        domains : [
+            "minio.salvawebpro.com",
+            "lh3.googleusercontent.com",
         ]
     },
     webpack(config) {

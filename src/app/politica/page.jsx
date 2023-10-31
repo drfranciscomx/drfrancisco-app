@@ -3,7 +3,7 @@ import React from 'react'
 const PoliticaPage = () => {
   return (
     <div className='w-[80%] mx-auto py-10'>
-         <div className='mx-auto bg-white p-10 rounded-lg shadow-lg'>
+         <div className='mx-auto bg-gray-200 p-10 rounded-lg shadow-lg'>
         <h1 className='text-2xl font-bold mb-4'>Política de Privacidad</h1>
 
         <p className='mb-4'>Esta Política de Privacidad describe cómo www.drfranciscorodriguez.mx (en adelante, el Sitio Web) recopila, utiliza y protege su información personal. Al utilizar este Sitio Web, usted acepta las prácticas descritas en esta política. Lea esta política detenidamente antes de usar el Sitio Web.</p>
@@ -38,9 +38,9 @@ const PoliticaPage = () => {
         <h2 className='text-xl font-semibold mt-6 mb-2'>Contacto</h2>
         <p>Para preguntas o inquietudes relacionadas con esta Política de Privacidad, por favor contáctenos en:</p>
         <ul className='list-disc pl-8'>
-            <li>Teléfono: +52 (686) 338 8341</li>
-            <li>Dirección: Colón Oriente 265 Int 104, Edificio María y José, Colonia Centro, CP 59680</li>
-            <li>Correo Electrónico: drfrancisco@gmail.com</li>
+            <li>Teléfono: +52 (351) 109 1423</li>
+            <li>Dirección: Calz. Zamora-Jacona 716, El Ensueño, 59813 Jacona de Plancarte, Mich.</li>
+            <li>Correo Electrónico: plasticsurgeryzamora@gmail.com</li>
         </ul>
     </div>
     </div>
