@@ -17,7 +17,7 @@ const Login = () => {
 
     useEffect(() => {
       if (session?.status === "authenticated") {
-        router.replace("/")
+        router.replace("/cart")
       }
       
     }, [session, router])
