@@ -24,14 +24,13 @@ const TeamComponemt = () => {
         className="w-full relative "
       >
         <Image 
-        width={2000}
+        width={900}
         height={700}
         quality={100}
-        sizes="(max-width: 768px) 100vw"
         style={{objectFit: "contain"}}
         className="relative max-w-full md:max-h-[300px] w-auto mx-auto"
         alt=""
-        src="/undefined3.webp"
+        src="/DrFranciscoTeam2.webp"
       />
       </motion.div>
       

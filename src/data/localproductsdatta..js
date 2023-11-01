@@ -23,7 +23,7 @@ export const localproducts = [
         "category": "Cirugía Estética",
         "price": 5000,
         "isPromo": true,
-        "promoPrice": 165000,
+        "promoPrice": 180000,
         "published": true,
         "imageUrls": [
           "https://minio.salvawebpro.com:9000/drfrancisco/Abdominoplastia-y-Liposuccion.webp",
@@ -31,7 +31,7 @@ export const localproducts = [
         ],
         "rating": 5,
         "quantity": 1,
-        "deposit": 180000
+        "deposit": 165000
       },
       {
         "_id": "65330d7f8151e96c6cf058d8",
