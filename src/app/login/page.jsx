@@ -65,11 +65,11 @@ const Login = () => {
                 <div className="logo-class w-fit mb-5">
                     <LogoComponent />
                 </div>
-                <button className='w-full text-black bg-slate-300 duration-500          ease-in-out hover:text-white hover:bg-stone-900 mb-4 flex flex-row gap-4
+                {/* <button className='w-full text-black bg-slate-300 duration-500          ease-in-out hover:text-white hover:bg-stone-900 mb-4 flex flex-row gap-4
                     items-center py-4 justify-center' onClick={() => {signIn("google")}}>
                     <IoLogoGoogle />Ingresa con Google
                 </button>
-                <div  className='text-center text-slate-200 my-4 '>- O -</div>
+                <div  className='text-center text-slate-200 my-4 '>- O -</div> */}
                 <form className='flex flex-col w-full justify-center items-center text-center gap-y-4 ' onSubmit={handleSubmit}>
                     <input 
                     className='text-center py-2 w-full'
