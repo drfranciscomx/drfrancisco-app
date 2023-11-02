@@ -69,11 +69,11 @@ export const options = {
             if (account?.provider == "google") {
                 await db.connect()
                 try {
-                    console.log(user.email);
                     const existinguser = await User.findOne({email: user.email})
                     if (!existinguser) {
                         const newUser = new User({
-                            email: user.email
+                            email: user.email,
+                            username: user.name
                         })
 
                         await newUser.save()

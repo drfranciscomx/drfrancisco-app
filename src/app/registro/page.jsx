@@ -62,11 +62,11 @@ const Register = () => {
                 <div className="logo-class w-fit mb-5">
                     <LogoComponent />
                 </div>
-                {/* <button className='w-full text-black bg-slate-300 duration-500          ease-in-out hover:text-white hover:bg-stone-900 mb-4 flex flex-row gap-4
+                <button className='w-full text-black bg-slate-300 duration-500          ease-in-out hover:text-white hover:bg-stone-900 mb-4 flex flex-row gap-4
                     items-center py-4 justify-center' onClick={() => {signIn("google")}}>
                     <IoLogoGoogle />Ingresa con Google
                 </button>
-                <div  className='text-center text-slate-200 my-4 '>- O -</div> */}
+                <div  className='text-center text-slate-200 my-4 '>- O -</div>
                 <form onSubmit={handleSubmit} className='flex flex-col gap-y-4 w-full'>
                     <input className='text-center py-2' type="text" placeholder='nombre...' onChange={(e) => setUsername(e.target.value)} />
                     <input className='text-center py-2' type="email" placeholder='email...' onChange={(e) => setEmail(e.target.value)} />
