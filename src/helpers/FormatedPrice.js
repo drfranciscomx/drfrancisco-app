@@ -1,16 +1,11 @@
-
-const FormatedPrice = ({ amount } ) => {
-
+const FormatedPrice = ({ amount }) => {
   const formattedAmount = new Number(amount).toLocaleString('en-US', {
     style: 'currency',
     currency: 'USD',
     maximumFractionDigits: 2,
   });
 
-  return (
-        <>{formattedAmount}</>
-    )
-  
-}
+  return <>{formattedAmount}</>;
+};
 
-export default FormatedPrice
+export default FormatedPrice;
