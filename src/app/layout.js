@@ -1,9 +1,10 @@
 import './css/globals.css';
 import MainLayout from '../components/layouts/MainLayout';
+import TagManager from 'react-gtm-module';
 
 export const metadata = {
   title: 'Cirujano Plástico Dr Francisco Rodriguez',
-  description: 'Dr Francisco Rodriguez cirugia plastica en Zamora Michoacan',
+  description: 'Dr Francisco Rodriguez cirugía plástica en Zamora Michoacan',
 };
 
 export default function RootLayout({ children }) {
