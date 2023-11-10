@@ -11,9 +11,7 @@ import { ToastContainer } from 'react-toastify';
 
 const tagManagerArgs = {
   gtmId: 'GTM-N4382WJN',
-  dataLayerName: 'PageDataLayer',
 };
-
 TagManager.initialize(tagManagerArgs);
 
 export default function Home() {
