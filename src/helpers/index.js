@@ -13,7 +13,7 @@ export const getProducts = async (searchParams) => {
 
   const searchQuery = queryString.stringify(urlParams);
   const { data } = await axios.get(
-    `https://www.drfranciscorodriguez.mx/api/servicios?${searchQuery}`
+    `${process.env.NEXTAUTH_URL}/api/servicios?${searchQuery}`
   );
   if (!{ data }) {
     throw new Error('Failed to fetch products');
@@ -23,7 +23,7 @@ export const getProducts = async (searchParams) => {
 };
 
 export const getOneProduct = async (_id) => {
-  const URL = `https://www.drfranciscorodriguez.mx/api/servicio?${_id}`;
+  const URL = `${process.env.NEXTAUTH_URL}/api/servicio?${_id}`;
   try {
     //const res = await fetch(URL)
     const res = await fetch(URL);
@@ -36,10 +36,8 @@ export const getOneProduct = async (_id) => {
 };
 
 export const getAllLocalProducts = async () => {
-  const res = await fetch(
-    `https://www.drfranciscorodriguez.mx/api/localservicios`
-  );
-  const data = res;
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/localservicios`);
+  const data = await res.json();
   if (!{ data }) {
     throw new Error('Failed to fetch local products');
   }
@@ -48,10 +46,10 @@ export const getAllLocalProducts = async () => {
 };
 
 export const getOneLocalProduct = async (_id) => {
-  const URL = `https://www.drfranciscorodriguez.mx/api/localservicio?${_id}`;
+  const URL = `${process.env.NEXTAUTH_URL}/api/localservicio?${_id}`;
   try {
     const res = await fetch(URL);
-    const data = res;
+    const data = await res.json();
     return data.product;
   } catch (error) {
     console.log(error);
