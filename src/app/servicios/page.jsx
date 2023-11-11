@@ -6,13 +6,13 @@ import { getAllLocalProducts } from '@/helpers';
 
 const ServiciosPage = async () => {
   const data = await getAllLocalProducts();
-  const products = await data.products;
+  const products = data.products;
   return (
-    <>
+    <div>
       <PageTransition />
       <MainServicesComponent />
       <ListProducts products={products} />
-    </>
+    </div>
   );
 };
 
