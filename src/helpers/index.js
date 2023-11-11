@@ -39,7 +39,7 @@ export const getAllLocalProducts = async () => {
   const res = await fetch(
     `https://www.drfranciscorodriguez.mx/api/localservicios`
   );
-  const data = await res.json();
+  const data = res;
   if (!{ data }) {
     throw new Error('Failed to fetch local products');
   }
@@ -51,7 +51,7 @@ export const getOneLocalProduct = async (_id) => {
   const URL = `https://www.drfranciscorodriguez.mx/api/localservicio?${_id}`;
   try {
     const res = await fetch(URL);
-    const data = await res.json();
+    const data = res;
     return data.product;
   } catch (error) {
     console.log(error);
