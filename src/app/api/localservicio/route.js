@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { localproducts } from '@/data/localproductsdatta.';
+import { localproducts } from '@/data/localproductsdatta';
 
 export const GET = async (req) => {
   const _id = req.url.split('?')[1];
