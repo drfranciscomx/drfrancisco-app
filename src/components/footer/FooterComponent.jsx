@@ -22,13 +22,13 @@ const FooterComponent = () => {
               <motion.div
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.7 }}
+                transition={{ duration: 0.6 }}
                 className="w-full flex flex-col items-start justify-start gap-[13px] text-white"
               >
                 <motion.a
                   whileHover={{ y: -4 }}
                   whileTap={{ y: 1 }}
-                  transition={{ duration: 0.09 }}
+                  transition={{ duration: 0.7 }}
                   className="[text-decoration:none] relative leading-[24px] text-[inherit]"
                   href="teL:+523511091423"
                 >
@@ -52,7 +52,7 @@ const FooterComponent = () => {
                 <motion.a
                   whileHover={{ y: -4 }}
                   whileTap={{ y: 1 }}
-                  transition={{ duration: 0.09 }}
+                  transition={{ duration: 0.8 }}
                   className="[text-decoration:none] relative leading-[24px] text-[inherit]"
                   href="mailto:plasticsurgeryzamora@gmail.com"
                   target="_blank"
@@ -64,7 +64,7 @@ const FooterComponent = () => {
               <motion.div
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.7 }}
+                transition={{ duration: 0.9 }}
                 className="mt-4 gap-3 flex flex-row sm:flex-col items-center justify-between"
               >
                 <div className="flex flex-row gap-3">
@@ -124,7 +124,7 @@ const FooterComponent = () => {
                   className="mb-4"
                 >
                   <Link
-                    href={'/details/653310c18d22988a4a58dff4'}
+                    href={'/servicio/653310c18d22988a4a58dff4'}
                     className="text-white  cursor-pointer duration-200 [decoration-none] left-0 no-underline "
                   >
                     Abdominoplastía
@@ -137,7 +137,7 @@ const FooterComponent = () => {
                   className="mb-4"
                 >
                   <Link
-                    href={'/details/65330d7f8151e96c6cf058d8'}
+                    href={'/servicio/65330d7f8151e96c6cf058d8'}
                     className="text-white  cursor-pointer duration-200 [decoration-none] left-0 no-underline "
                   >
                     Implantes Mamarios
@@ -150,7 +150,7 @@ const FooterComponent = () => {
                   className="mb-4"
                 >
                   <Link
-                    href={'/details/65330d7f8151e96c6cf058d6'}
+                    href={'/servicio/65330d7f8151e96c6cf058d6'}
                     className="text-white  cursor-pointer duration-200 [decoration-none] left-0 no-underline "
                   >
                     Liposuccion
@@ -163,7 +163,7 @@ const FooterComponent = () => {
                   className="mb-4"
                 >
                   <Link
-                    href={'/details/65330d7f8151e96c6cf058dc'}
+                    href={'/servicio/65330d7f8151e96c6cf058dc'}
                     className="text-white  cursor-pointer duration-200 [decoration-none] left-0 no-underline "
                   >
                     Mommy Makeover

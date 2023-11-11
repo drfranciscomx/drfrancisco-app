@@ -108,7 +108,7 @@ const Register = () => {
         </form>
       </div>
 
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
     </ContainerComponent>
   );
 };

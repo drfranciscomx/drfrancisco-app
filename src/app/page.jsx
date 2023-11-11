@@ -1,4 +1,3 @@
-'use client';
 import ViewResultsComponent from '@/components/ctas/ViewResultsComponent';
 import HeroComponent from '@/components/hero/HeroComponent';
 import FaqComponent from '@/components/sections/FaqComponent';
@@ -12,7 +11,7 @@ export default function Home() {
       <HeroComponent />
       <ViewResultsComponent />
       <FaqComponent />
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
     </main>
   );
 }

@@ -22,7 +22,7 @@ const TeamComponemt = () => {
       <motion.div
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5 }}
         className="w-full relative "
       >
         <Image
@@ -32,7 +32,7 @@ const TeamComponemt = () => {
           style={{ objectFit: 'contain' }}
           className="relative max-w-full md:max-h-[300px] w-auto mx-auto"
           alt=""
-          src="/DrFranciscoTeam2.webp"
+          src="/DrFranciscoTeam.webp"
         />
       </motion.div>
 

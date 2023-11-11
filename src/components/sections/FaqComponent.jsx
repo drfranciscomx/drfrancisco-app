@@ -1,3 +1,4 @@
+'use client';
 import { accordions } from '@/data/faqdata';
 import Accordion from './Accordion';
 import { motion } from 'framer-motion';

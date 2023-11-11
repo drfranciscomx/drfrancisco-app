@@ -13,6 +13,7 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import { useDispatch, useSelector } from 'react-redux';
 import FormatedPrice from '@/helpers/FormatedPrice';
 import { useState, useEffect } from 'react';
+import PageTransition from '../transitions/PageTransition';
 
 const CustomLink = ({ href, title, className = '' }) => {
   const router = useRouter();
@@ -51,6 +52,7 @@ const MainMenuComponent = () => {
 
   return (
     <header className="self-stretch flex flex-row px-1 box-border items-center justify-start sticky mx-auto ">
+      <PageTransition />
       {/* Logo  */}
       <LogoComponent />
       {/* Navigation left */}
@@ -85,13 +87,13 @@ const MainMenuComponent = () => {
       <nav className="md:hidden m-0 flex-1  flex flex-row py-2.5 px-5 items-center  justify-end gap-7 font-poppins text-sm tracking-widest">
         {/* Login/Register */}
         {!session && (
-          <div
-            onClick={() => signIn()}
+          <Link
+            href={'/login'}
             className="cursor-pointer flex justify-center items-center gap-x-1"
           >
             <AiOutlineUser className="text-2xl" />
             <p className="text-sm font-semibold">Inicio/Registro</p>
-          </div>
+          </Link>
         )}
         {/* Cart Button */}
         <Link href={'/cart'}>

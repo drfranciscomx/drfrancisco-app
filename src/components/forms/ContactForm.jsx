@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { toast, ToastContainer } from 'react-toastify';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = (credentials) => {
@@ -19,6 +19,13 @@ const ContactForm = (credentials) => {
     tel: '',
   });
   const form = useRef();
+  const toastConfig = {
+    position: toast.POSITION.BOTTOM_CENTER,
+    className: 'foo-bar',
+    theme: 'dark',
+    transition: Bounce,
+  };
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
@@ -29,16 +36,16 @@ const ContactForm = (credentials) => {
     }
 
     if (form.current.from_name_id.value === '') {
-      toast.warning(`Por favor ingresa tu nombre`);
+      toast.warning(`Por favor ingresa tu nombre`, toastConfig);
       return;
     } else if (form.current.email_id.value === '') {
-      toast.warning(`Por favor ingresa tu email`);
+      toast.warning(`Por favor ingresa tu email`, toastConfig);
       return;
     } else if (form.current.tel_id.value === '') {
-      toast.warning(`Por favor ingresa tu Teléfono`);
+      toast.warning(`Por favor ingresa tu Teléfono`, toastConfig);
       return;
     } else if (form.current.message_id.value === '') {
-      toast.warning(`Por favor ingresa tu mensaje`);
+      toast.warning(`Por favor ingresa tu mensaje`, toastConfig);
       return;
     }
 
@@ -139,6 +146,7 @@ const ContactForm = (credentials) => {
           </motion.button>
         </motion.div>
       </motion.form>
+      <ToastContainer autoClose={1000} />
     </>
   );
 };

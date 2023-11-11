@@ -2,16 +2,15 @@
 
 import Image from 'next/image';
 import { IoIosStar, IoMdHeart, IoMdCart } from 'react-icons/io';
-import Link from 'next/link';
-import { toast, ToastContainer } from 'react-toastify';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { calculatePercentage } from '@/helpers';
 import FormatedPrice from '@/helpers/FormatedPrice';
 import { motion } from 'framer-motion';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/redux/shoppingSlice';
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const ProductsData = ({ item }) => {
   const router = useRouter();
@@ -31,7 +30,7 @@ const ProductsData = ({ item }) => {
         transition={{ duration: 1.0 }}
         className="border-[1px] border-yellow-400 rounded-lg"
       >
-        <a href={`/details/${item._id}`}>
+        <Link href={`/servicio/${item._id}`}>
           <div className="w-full h-[300px] group overflow-hidden relative">
             <Image
               src={item?.imageUrls[0]}
@@ -59,7 +58,7 @@ const ProductsData = ({ item }) => {
               ''
             )}
           </div>
-        </a>
+        </Link>
         <div className=" px-4 py-4 flex flex-col bg-black rounded-b-lg">
           {/* star icons
             <div className="flex items-center gap-x-1">{startArray}</div> */}
@@ -98,7 +97,13 @@ const ProductsData = ({ item }) => {
               onClick={() =>
                 dispatch(addToCart(item)) &&
                 toast.success(
-                  `${item?.title.substring(0, 15)} se agrego al carrito!`
+                  `${item?.title.substring(0, 15)} se agrego al carrito!`,
+                  {
+                    position: toast.POSITION.TOP_CENTER,
+                    className: 'foo-bar',
+                    theme: 'dark',
+                    transition: Bounce,
+                  }
                 ) &&
                 router.push('/cart')
               }

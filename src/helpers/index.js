@@ -1,15 +1,14 @@
 import queryString from 'query-string';
 import axios from 'axios';
-const connection = {};
 
 export const getProducts = async (searchParams) => {
   const urlParams = {
-    keyword: searchParams.keyword,
-    page: searchParams.page,
-    category: searchParams.category,
-    'rating[gte]': searchParams.rating,
-    'price[lte]': searchParams.min,
-    'price[gte]': searchParams.max,
+    keyword: searchParams?.keyword,
+    page: searchParams?.page,
+    category: searchParams?.category,
+    'rating[gte]': searchParams?.rating,
+    'price[lte]': searchParams?.min,
+    'price[gte]': searchParams?.max,
   };
 
   const searchQuery = queryString.stringify(urlParams);
@@ -21,6 +20,40 @@ export const getProducts = async (searchParams) => {
   }
 
   return data;
+};
+
+export const getOneProduct = async (_id) => {
+  const URL = `${process.env.NEXTAUTH_URL}/api/servicio?${_id}`;
+  try {
+    //const res = await fetch(URL)
+    const res = await fetch(URL);
+
+    const data = await res.json();
+    return data.product;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getAllLocalProducts = async () => {
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/localservicios`);
+  const data = await res.json();
+  if (!{ data }) {
+    throw new Error('Failed to fetch local products');
+  }
+
+  return data;
+};
+
+export const getOneLocalProduct = async (_id) => {
+  const URL = `${process.env.NEXTAUTH_URL}/api/localservicio?${_id}`;
+  try {
+    const res = await fetch(URL);
+    const data = await res.json();
+    return data.product;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const getTrendingProducts = async () => {

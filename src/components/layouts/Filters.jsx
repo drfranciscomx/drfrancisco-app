@@ -1,52 +1,48 @@
-"use client";
+'use client';
 
-import React from "react";
-import StarRatings from "react-star-ratings";
-import { useRouter } from "next/navigation";
-import { getPriceQueryParams } from "@/helpers/helpers";
-import { useState } from "react";
+import React from 'react';
+import StarRatings from 'react-star-ratings';
+import { useRouter } from 'next/navigation';
+import { getPriceQueryParams } from '@/helpers/helpers';
+import { useState } from 'react';
+import Link from 'next/link';
 
 const Filters = () => {
-
-  const [minAmount, setMinAmount] = useState("")
-  const [maxAmount, setMaxAmount] = useState("")
-  const router = useRouter()
+  const [minAmount, setMinAmount] = useState('');
+  const [maxAmount, setMaxAmount] = useState('');
+  const router = useRouter();
   let queryParams;
 
   function hnadleCheckBocClick(checkbox) {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       queryParams = new URLSearchParams(window.location.search);
     }
 
-    const checkBoxes = document.getElementsByName(checkbox.name)
+    const checkBoxes = document.getElementsByName(checkbox.name);
 
     checkBoxes.forEach((item) => {
-      if (item != checkbox ) item.checked = false
-      })
+      if (item != checkbox) item.checked = false;
+    });
 
-      if (checkbox.checked == false) {
-        // delete the filter query
-        queryParams.delete(checkbox.name)
-      
+    if (checkbox.checked == false) {
+      // delete the filter query
+      queryParams.delete(checkbox.name);
+    } else {
+      // set the filter query
+      if (queryParams.has(checkbox.name)) {
+        queryParams.set(checkbox.name, checkbox.value);
       } else {
-        // set the filter query
-        if (queryParams.has(checkbox.name)) {
-          queryParams.set(checkbox.name, checkbox.value)
-      } else {
-          queryParams.append(checkbox.name, checkbox.value)
+        queryParams.append(checkbox.name, checkbox.value);
       }
-
-  
-      }
-    const path = window.location.pathname + "?" + queryParams.toString()
-    router.push(path)
-
+    }
+    const path = window.location.pathname + '?' + queryParams.toString();
+    router.push(path);
   }
 
   function checkHandler(checkBoxType, checkBoxValue) {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       queryParams = new URLSearchParams(window.location.search);
- 
+
       const value = queryParams.get(checkBoxType);
       if (checkBoxValue === value) return true;
       return false;
@@ -54,26 +50,25 @@ const Filters = () => {
   }
 
   function handlePriceButtonClick() {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       queryParams = new URLSearchParams(window.location.search);
 
-      queryParams = getPriceQueryParams(queryParams, "min", minAmount)
-      queryParams = getPriceQueryParams(queryParams, "max", maxAmount)
+      queryParams = getPriceQueryParams(queryParams, 'min', minAmount);
+      queryParams = getPriceQueryParams(queryParams, 'max', maxAmount);
 
-      const path = window.location.pathname + "?" + queryParams.toString()
-      router.push(path)
-
+      const path = window.location.pathname + '?' + queryParams.toString();
+      router.push(path);
     }
   }
 
   return (
     <aside className="w-1/4 md:w-5/6 px-4 mx-auto">
-      <a
+      <Link
         className="hidden mb-5  w-full text-center px-4 py-2 md:inline-block text-lg text-gray-700 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 hover:text-blue-600"
         href="#"
       >
         Filter by
-      </a>
+      </Link>
       {/* Price Filter */}
       {/* <div className="md:hidden px-6 py-4 border border-gray-200 bg-white rounded shadow-sm">
         <h3 className="font-semibold mb-2">Price ($)</h3>
@@ -123,7 +118,7 @@ const Filters = () => {
                 type="checkbox"
                 value="wedding"
                 className="h-4 w-4"
-                defaultChecked={checkHandler("category", "wedding")}
+                defaultChecked={checkHandler('category', 'wedding')}
                 onClick={(e) => hnadleCheckBocClick(e.target)}
               />
               <span className="ml-2 text-gray-500"> Bridal </span>
@@ -136,7 +131,7 @@ const Filters = () => {
                 type="checkbox"
                 value="quinces"
                 className="h-4 w-4"
-                defaultChecked={checkHandler("category", "quinces")}
+                defaultChecked={checkHandler('category', 'quinces')}
                 onClick={(e) => hnadleCheckBocClick(e.target)}
               />
               <span className="ml-2 text-gray-500"> Quinces </span>
@@ -149,7 +144,7 @@ const Filters = () => {
                 type="checkbox"
                 value="tuxedo"
                 className="h-4 w-4"
-                defaultChecked={checkHandler("category", "tuxedo")}
+                defaultChecked={checkHandler('category', 'tuxedo')}
                 onClick={(e) => hnadleCheckBocClick(e.target)}
               />
               <span className="ml-2 text-gray-500"> Tuxedo </span>
@@ -162,7 +157,7 @@ const Filters = () => {
                 type="checkbox"
                 value="Prom"
                 className="h-4 w-4"
-                defaultChecked={checkHandler("category", "prom")}
+                defaultChecked={checkHandler('category', 'prom')}
                 onClick={(e) => hnadleCheckBocClick(e.target)}
               />
               <span className="ml-2 text-gray-500"> Prom </span>
@@ -175,7 +170,7 @@ const Filters = () => {
                 type="checkbox"
                 value="evening"
                 className="h-4 w-4"
-                defaultChecked={checkHandler("category", "evening")}
+                defaultChecked={checkHandler('category', 'evening')}
                 onClick={(e) => hnadleCheckBocClick(e.target)}
               />
               <span className="ml-2 text-gray-500"> Evening </span>
@@ -195,11 +190,11 @@ const Filters = () => {
                   type="checkbox"
                   value={rating}
                   className="h-4 w-4"
-                  defaultChecked={checkHandler("ratings", `${rating}`)}
+                  defaultChecked={checkHandler('ratings', `${rating}`)}
                   onClick={(e) => hnadleCheckBocClick(e.target)}
                 />
                 <span className="ml-2 text-gray-500">
-                  {" "}
+                  {' '}
                   <StarRatings
                     rating={rating}
                     starRatedColor="#ffb829"
@@ -207,7 +202,7 @@ const Filters = () => {
                     starDimension="20px"
                     starSpacing="2px"
                     name="rating"
-                  />{" "}
+                  />{' '}
                 </span>
               </label>
             ))}

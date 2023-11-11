@@ -8,10 +8,10 @@ const GalleryPage = () => {
       <AnimatedText
         text={`Explora nuestra galería de pacientes `}
         text2={`Satisfechos`}
-        className="  font-headerFont text-white text-center md:text-4xl"
+        className="  font-headerFont text-white text-center text-4xl"
       />
       <AnimatedText
-        descrp="CContamos con una amplia gama de procedimientos estéticos."
+        descrp="Contamos con una amplia gama de procedimientos estéticos."
         className=" text-5xl font-bodyFont text-white text-center md:text-2xl"
       />
       <ImageGallery />

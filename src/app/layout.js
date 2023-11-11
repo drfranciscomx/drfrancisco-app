@@ -1,10 +1,13 @@
 import './css/globals.css';
 import MainLayout from '../components/layouts/MainLayout';
-import TagManager from 'react-gtm-module';
 import Script from 'next/script';
 
 export const metadata = {
-  title: 'Cirujano Plástico Dr Francisco Rodriguez',
+  metadataBase: new URL('https://www.drfranciscorodriguez.mx/'),
+  title: {
+    default: 'Dr Francisco Rodriguez | Cirujano Plástico',
+    template: `%s | Dr Francisco Rodriguez`,
+  },
   description: 'Dr Francisco Rodriguez cirugía plástica en Zamora Michoacan',
 };
 

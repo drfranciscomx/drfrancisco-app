@@ -26,7 +26,6 @@ function getFirstImage(imageUrls) {
 
 const CartItem = () => {
   const { productData } = useSelector((state) => state?.shopping);
-  console.log('productData', productData);
   const dispatch = useDispatch();
 
   return (
@@ -102,7 +101,7 @@ const CartItem = () => {
         ))}
       </div>
 
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
     </div>
   );
 };

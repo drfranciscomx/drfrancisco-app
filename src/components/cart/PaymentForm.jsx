@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 import { resetCart, saveOrder } from '@/redux/shoppingSlice';
 import trustfactorimage from '@/images/stripe-badge-transparente.webp';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const PaymentForm = () => {
   const dispatch = useDispatch();
@@ -118,15 +119,14 @@ const PaymentForm = () => {
         <div>
           {/** Login/Register */}
           {!session && (
-            <div
-              onClick={() => signIn()}
-              className=" w-1/4 md:w-2/3 sm:w-full bg-black text-slate-100 mt-4 py-3 px-6 hover:bg-yellow-600 duration-500 cursor-pointer"
-            >
-              <div className="flex flex-row justify-center items-center gap-x-3 ">
-                <AiOutlineUser className="text-ld" />
-                <p className="text-sm font-base">Iniciar/Registro</p>
+            <Link href={'/login'}>
+              <div className=" w-1/4 md:w-2/3 sm:w-full bg-black text-slate-100 mt-4 py-3 px-6 hover:bg-yellow-600 duration-500 cursor-pointer">
+                <div className="flex flex-row justify-center items-center gap-x-3 ">
+                  <AiOutlineUser className="text-ld" />
+                  <p className="text-sm font-base">Iniciar/Registro</p>
+                </div>
               </div>
-            </div>
+            </Link>
           )}
           <p className="text-sm mt-1 text-red-600 py-2">
             Por favor inicie sesión para continuar

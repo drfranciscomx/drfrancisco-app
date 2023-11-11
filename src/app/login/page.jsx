@@ -9,6 +9,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { IoLogoGoogle } from 'react-icons/io';
 import LogoComponent from '@/components/header/LogoComponent';
+import PageTransition from '@/components/transitions/PageTransition';
 
 const Login = () => {
   const session = useSession();
@@ -22,12 +23,18 @@ const Login = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const toastConfig = {
+    position: toast.POSITION.TOP_CENTER,
+    className: 'foo-bar',
+    theme: 'dark',
+    autoClose: 500,
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (email === '') {
-      toast.error('Por favor ingresa tu email!');
+      toast.error('Por favor ingresa tu email!', toastConfig);
       return;
     }
     if (password === '') {
@@ -58,6 +65,7 @@ const Login = () => {
 
   return (
     <>
+      <PageTransition />
       <ContainerComponent>
         <div className="flex flex-col bg-black p-5 justify-center items-center h-[100%] w-[30%] md:w-[40%] sm:w-[70%] mx-auto my-20">
           <h2 className="py-5 text-white">Iniciar Session</h2>
@@ -101,7 +109,7 @@ const Login = () => {
             </Link>
           </form>
         </div>
-        <ToastContainer />
+        <ToastContainer autoClose={1000} />
       </ContainerComponent>
     </>
   );
