@@ -171,7 +171,9 @@ const ProductDetails = ({ ctx, product }) => {
                   )}
 
                   <p className="font-semibold text-4xl text-white font-bodyFont">
-                    <FormatedPrice amount={product?.deposit} />
+                    {product?.deposit > 0 ? (
+                      <FormatedPrice amount={product?.deposit} />
+                    ) : null}
                   </p>
                   <p className="text-xl text-white font-bodyFont">
                     <FormatedPrice amount={product?.price} />

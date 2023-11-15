@@ -58,21 +58,21 @@ const EducationComponent = () => {
         <ul className="text-white ">
           <Details
             place={`UAG`}
-            years={`Agosto 1998 - Abril 1999`}
+            years={`2004 - 2010`}
             position={`Medicina General`}
             description={`Migrando a la ciudad de Guadalajara Jalisco para continuar mis estudios universitarios de medicina en la reconocida universidad autónoma de Guadalajara durante 6 años`}
           />
 
           <Details
             place={`Universidad de Colima`}
-            years={`Mayo 1999 - Abril 2004`}
+            years={`2014 - 2017`}
             position={`Cirugía General`}
             description={`Continue formación en cirugía general durante 4 años en la ciudad de Colima en el reconocido Hospital Universitario  de Colima así como la máxima casa de estudios de México UNAM`}
           />
 
           <Details
-            place={`ISSSTE`}
-            years={`Marzo 2005 - Julio 2010`}
+            place={`ISSSTE / UDG`}
+            years={`2017 - 2021`}
             position={`Cirujano plástico`}
             description={`Para completar mi formación como cirujano plástico estético y reconstructivo complete múltiples rotaciones en diferentes ciudades del País.`}
           />

@@ -51,7 +51,7 @@ const WhyUsComponent = () => {
         <div className="max-w-full flex flex-row flex-wrap sm:flex-col">
           <div className="flex flex-col items-start justify-start gap-3 text-silver-200 pr-10 pb-10 sm:px-0">
             <div className="relative tracking-[0.04em] font-medium text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 inline-block w-[150px] text-5xl ">
-              <AnimatedNumbers value={300} />+
+              <AnimatedNumbers value={2000} />+
             </div>
             <h3 className=" text-white m-0 relative text-2xl leading-[146%] font-medium font-roboto inline-block w-[262px]">
               Pacientes Satisfechos
@@ -60,7 +60,7 @@ const WhyUsComponent = () => {
 
           <div className=" flex flex-col items-start justify-start gap-3 text-silver-200">
             <div className="relative tracking-[0.04em] font-medium text-transparent bg-clip-text bg-gradient-to-br from-yellow-500 to-yellow-600 inline-block w-[98px] text-5xl">
-              <AnimatedNumbers value={20} />+
+              <AnimatedNumbers value={10} />+
             </div>
             <h3 className="text-white m-0 relative text-2xl leading-[146%] font-medium font-roboto inline-block w-[235px]">
               Años de Experiencia

@@ -47,7 +47,7 @@ export const localproducts = [
     published: true,
     imageUrls: [
       'https://minio.salvawebpro.com:9000/drfrancisco/servicios/Implantes_de_senos_01.webp',
-      '/implantes-de-mama-02.webp',
+      'https://minio.salvawebpro.com:9000/drfrancisco/servicios/implantes-de-mama-02.webp',
     ],
     rating: 5,
     quantity: 1,
@@ -142,5 +142,22 @@ export const localproducts = [
     rating: 5,
     quantity: 1,
     deposit: 90000,
+  },
+  {
+    _id: '65551941f79c6bfa73c973bc',
+    title: 'Otros Procedimientos',
+    description: 'Ofrecemos una amplia gama de procedimientos estéticos',
+    category: 'Cirugía Estética',
+    price: 5000,
+    isPromo: false,
+    promoPrice: 0,
+    published: false,
+    imageUrls: [
+      'https://minio.salvawebpro.com:9000/drfrancisco/servicios/otros_procedimientos.webp',
+      'https://minio.salvawebpro.com:9000/drfrancisco/servicios/otros_procedimientos_2.webp',
+    ],
+    rating: 5,
+    quantity: 1,
+    deposit: 0,
   },
 ];

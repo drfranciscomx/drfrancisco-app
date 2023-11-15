@@ -63,11 +63,16 @@ const ProductsData = ({ item }) => {
           {/* star icons
             <div className="flex items-center gap-x-1">{startArray}</div> */}
           <p className="text-white tracking-widest">{item?.title}</p>
-          <p className=" text-yellow-600 text-sm">Desde</p>
+          {item?.deposit > 0 ? (
+            <p className=" text-yellow-600 text-sm">Desde</p>
+          ) : null}
+
           <div className="pricing-class flex fle-row items-center gap-x-2">
             <div className="flex flex-col gap-y-1">
               <p className="font-semibold text-white tracking-wider text-xl">
-                <FormatedPrice amount={item?.deposit} />
+                {item?.deposit > 0 ? (
+                  <FormatedPrice amount={item?.deposit} />
+                ) : null}
               </p>
             </div>
             {item?.promoPrice ? (
