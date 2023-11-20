@@ -145,7 +145,7 @@ export const localproducts = [
   },
   {
     _id: '65551941f79c6bfa73c973bc',
-    title: 'Otros Procedimientos',
+    title: 'Apartado Cirugía',
     description: 'Ofrecemos una amplia gama de procedimientos estéticos',
     category: 'Cirugía Estética',
     price: 5000,

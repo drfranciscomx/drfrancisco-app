@@ -153,7 +153,7 @@ const FooterComponent = () => {
                     href={'/servicio/65330d7f8151e96c6cf058d6'}
                     className="text-white  cursor-pointer duration-200 [decoration-none] left-0 no-underline "
                   >
-                    Liposuccion
+                    Liposucción
                   </Link>
                 </motion.li>
                 <motion.li
@@ -179,7 +179,7 @@ const FooterComponent = () => {
                     href={'/servicios'}
                     className="text-white  cursor-pointer duration-200 [decoration-none] left-0 no-underline "
                   >
-                    Reserva tu Consulta
+                    Reserva tu Cirugía
                   </Link>
                 </motion.li>
                 <motion.li
